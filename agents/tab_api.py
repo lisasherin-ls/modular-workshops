@@ -32,7 +32,16 @@ except ImportError:  # pragma: no cover - falls back to httpx
 
 from agents.mock_data import GOING_SCALE
 
-API_ROOT = os.getenv("API_ROOT")
+
+def _api_root() -> str:
+    """Return the configured TAB info-service base URL."""
+    value = os.getenv("API_ROOT", "").strip().rstrip("/")
+    if not value or not value.startswith(("http://", "https://")):
+        raise ValueError(
+            "API_ROOT is not configured: set API_ROOT to the TAB info-service base URL, "
+            "e.g. https://api.beta.tab.com.au/v1/tab-info-service"
+        )
+    return value
 
 # Track condition comes back in at least four dialects across one response:
 # the AU numeric scale (SOFT5), bare international words (GOOD), US usage
@@ -548,7 +557,7 @@ def _get(
 def fetch_meetings(date: str, jurisdiction: str = "NSW", timeout: float = 20.0) -> dict:
     """GET the meetings for a date. Returns the raw payload — normalise it next."""
     _check(date, "", jurisdiction)
-    url = f"{API_ROOT}/dates/{date}/meetings/"
+    url = f"{_api_root()}/dates/{date}/meetings/"
     params = {"jurisdiction": jurisdiction.upper()}
     return _get(url, params, timeout, "meetings", date=date)
 
@@ -603,7 +612,7 @@ def fetch_race(
     _check(date, venue, jurisdiction)
     if not isinstance(race_number, int) or not 1 <= race_number <= 20:
         raise ValueError(f"race_number must be 1-20. Got {race_number!r}.")
-    url = f"{API_ROOT}/dates/{date}/meetings/{race_type}/{venue.upper()}/races/{race_number}"
+    url = f"{_api_root()}/dates/{date}/meetings/{race_type}/{venue.upper()}/races/{race_number}"
     params = {"jurisdiction": jurisdiction.upper(), "returnOffers": "true", "returnPromo": "true"}
     return _get(url, params, timeout, "race", date=date, venue=venue, race_number=race_number)
 
@@ -641,7 +650,7 @@ def fetch_form(
     if not isinstance(runner_number, int) or not 1 <= runner_number <= 30:
         raise ValueError(f"runner_number must be 1-30. Got {runner_number!r}.")
     url = (
-        f"{API_ROOT}/dates/{date}/meetings/{race_type}/{venue.upper()}"
+        f"{_api_root()}/dates/{date}/meetings/{race_type}/{venue.upper()}"
         f"/races/{race_number}/form/{runner_number}"
     )
     print()
@@ -671,7 +680,7 @@ def fetch_race_form(
     if not isinstance(race_number, int) or not 1 <= race_number <= 20:
         raise ValueError(f"race_number must be 1-20. Got {race_number!r}.")
     url = (
-        f"{API_ROOT}/dates/{date}/meetings/{race_type}/{venue.upper()}"
+        f"{_api_root()}/dates/{date}/meetings/{race_type}/{venue.upper()}"
         f"/races/{race_number}/form/"
     )
     print("")

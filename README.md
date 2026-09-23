@@ -26,6 +26,7 @@ cp .env.example .env
 | `LANGSMITH_API_KEY` | Modules 3 & 4 (recommended for all) | <https://smith.langchain.com> |
 | `LANGSMITH_API_KEY_GATEWAY` / `WORKSPACE_ID` | Module 3 §1 (LangSmith Gateway policies) | same key as `LANGSMITH_API_KEY`; workspace ID from LangSmith Settings → Workspace |
 | `TAVILY_API_KEY` | Modules 1 & 3 (web search tool) | <https://tavily.com> |
+| `API_ROOT` | Module 5 (TAB info service) | TAB info-service base URL, e.g. `https://api.beta.tab.com.au/v1/tab-info-service` |
 
 ```bash
 # 3. Start Jupyter
