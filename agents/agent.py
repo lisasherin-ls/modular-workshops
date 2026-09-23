@@ -19,7 +19,11 @@ from langchain.chat_models import init_chat_model
 
 
 from agents.prompts import SYSTEM_PROMPT
-from agents.middleware import block_competitor_odds, log_recommendations
+from agents.middleware import (
+    block_competitor_odds,
+    block_off_domain_requests,
+    log_recommendations,
+)
 from agents.tools_live import TOOLS_LIVE
 
 load_dotenv(override=True)
@@ -53,5 +57,10 @@ agent = create_agent(
     system_prompt=SYSTEM_PROMPT,
     # Without this a tool raising ValueError aborts the whole run, so the
     # agent never sees messages like "no saved response for WFM R4".
-    middleware=[log_recommendations, ToolErrorMiddleware(on_error=_tool_error)],
+    middleware=[
+        block_off_domain_requests,
+        block_competitor_odds,
+        log_recommendations,
+        ToolErrorMiddleware(on_error=_tool_error),
+    ],
 )

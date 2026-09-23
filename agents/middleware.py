@@ -2,6 +2,8 @@
 
 Two hooks, at two points in the loop:
 
+    block_off_domain_requests before_model -- a recognizable off-domain request
+                                             never reaches the model
     block_competitor_odds  before_model    -- a question about a rival's odds
                                               never reaches the model
     log_recommendations    wrap_tool_call  -- every recommendation is recorded
@@ -43,6 +45,21 @@ ODDS_TERMS = (
     "accumulator",
 )
 
+_HTTP_STATUS_RE = re.compile(
+    r"(?:\b(?:http|status(?:\s+code)?)\b[^\n]{0,40}\b[1-5]\d{2}\b|"
+    r"\b(?:what(?:'s| is)|explain|meaning of|define)\b[^\n]{0,30}\b[1-5]\d{2}\b|"
+    r"\b[1-5]\d{2}\s+(?:error|status code)\b)",
+    re.I,
+)
+_DEBUGGING_RE = re.compile(
+    r"(?:\b(?:can you|could you|please|help me|how do i|why is)\b[^\n]{0,80}\b"
+    r"(?:fix|debug|diagnose|troubleshoot|solve)\b|"
+    r"\b(?:fix|debug|diagnose|troubleshoot)\b[^\n]{0,40}\b"
+    r"(?:bug|error|issue|problem|code|request)\b)",
+    re.I,
+)
+_RIDDLE_RE = re.compile(r"\b(?:solve|answer|tell me)\b[^\n]{0,40}\briddle\b", re.I)
+
 _COMPETITOR_RE = re.compile("|".join(re.escape(name) for name in COMPETITORS), re.I)
 _ODDS_RE = re.compile(r"\b(" + "|".join(ODDS_TERMS) + r")\b", re.I)
 
@@ -52,6 +69,26 @@ REFUSAL = (
     "weather expected on the day, and show you the form behind it. "
     "Ask me about a race and I'll take you through the field."
 )
+SCOPE_REFUSAL = (
+    "I can help with a race, including the meeting, going, runners, or form."
+)
+
+
+@before_model(can_jump_to=["end"])
+def block_off_domain_requests(state: AgentState, runtime: Runtime) -> dict | None:
+    """Decline recognizable off-domain requests without sending them to the model."""
+    last = state["messages"][-1]
+    if not isinstance(last, HumanMessage):
+        return None
+
+    if (
+        _HTTP_STATUS_RE.search(last.text)
+        or _DEBUGGING_RE.search(last.text)
+        or _RIDDLE_RE.search(last.text)
+    ):
+        return {"jump_to": "end", "messages": [AIMessage(content=SCOPE_REFUSAL)]}
+
+    return None
 
 
 @before_model(can_jump_to=["end"])
