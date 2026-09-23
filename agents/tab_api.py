@@ -20,6 +20,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from pathlib import Path
 from typing import Any
 
@@ -496,7 +497,7 @@ def _load_fixture(kind: str, date: str, venue: str, race_number: int | None) -> 
     )
 
 
-def _http_get(url: str, params: dict, timeout: float) -> dict:
+def _http_get(url: str, params: dict, timeout: float, retries: int = 0) -> dict:
     """One GET against the live API.
 
     TAB sits behind a WAF that rejects ordinary API clients on TLS fingerprint
@@ -504,18 +505,38 @@ def _http_get(url: str, params: dict, timeout: float) -> dict:
     impersonates Chrome's handshake, which is what makes live calls work at
     all. httpx stays as a fallback for environments without it.
     """
+    transport_errors: tuple[type[Exception], ...] = (httpx.TransportError,)
     if curl_requests is not None:
+        transport_errors += (
+            curl_requests.exceptions.RequestException,
+            curl_requests.exceptions.CurlError,
+        )
+
+    for attempt in range(retries + 1):
         try:
-            response = curl_requests.get(
-                url,
-                params=params,
-                # Override with TAB_IMPERSONATE (e.g. "chrome124", "safari17_0")
-                # if the WAF stops accepting the default profile.
-                impersonate=os.getenv("TAB_IMPERSONATE", "chrome"),
-                timeout=timeout,
-            )
-        except Exception as exc:  # noqa: BLE001 - transport errors vary by backend
+            if curl_requests is not None:
+                response = curl_requests.get(
+                    url,
+                    params=params,
+                    # Override with TAB_IMPERSONATE (e.g. "chrome124", "safari17_0")
+                    # if the WAF stops accepting the default profile.
+                    impersonate=os.getenv("TAB_IMPERSONATE", "chrome"),
+                    timeout=timeout,
+                )
+            else:
+                response = httpx.get(
+                    url,
+                    params=params,
+                    headers=BROWSER_HEADERS,
+                    timeout=timeout,
+                    follow_redirects=True,
+                )
+        except transport_errors as exc:
+            if attempt < retries:
+                time.sleep(0.25)
+                continue
             raise ValueError(f"Could not reach the TAB API: {exc}") from exc
+
         if response.status_code >= 400:
             raise ValueError(
                 f"TAB returned {response.status_code}. Check the date, venue "
@@ -523,11 +544,7 @@ def _http_get(url: str, params: dict, timeout: float) -> dict:
             )
         return response.json()
 
-    response = httpx.get(
-        url, params=params, headers=BROWSER_HEADERS, timeout=timeout, follow_redirects=True
-    )
-    response.raise_for_status()
-    return response.json()
+    raise RuntimeError("TAB API request ended without a response")
 
 
 def _get(
@@ -538,19 +555,20 @@ def _get(
     date: str = "",
     venue: str = "",
     race_number: int | None = None,
+    retries: int = 0,
 ) -> dict:
     """One GET, or the saved response when TAB_FIXTURES is set."""
     if use_fixtures():
         return _load_fixture(fixture, date, venue, race_number)
-    return _http_get(url, params, timeout)
+    return _http_get(url, params, timeout, retries)
 
 
-def fetch_meetings(date: str, jurisdiction: str = "NSW", timeout: float = 20.0) -> dict:
+def fetch_meetings(date: str, jurisdiction: str = "NSW", timeout: float = 8.0) -> dict:
     """GET the meetings for a date. Returns the raw payload — normalise it next."""
     _check(date, "", jurisdiction)
     url = f"{API_ROOT}/dates/{date}/meetings/"
     params = {"jurisdiction": jurisdiction.upper()}
-    return _get(url, params, timeout, "meetings", date=date)
+    return _get(url, params, timeout, "meetings", date=date, retries=1)
 
 
 # The meetings payload is big and slow-changing; one fetch per date serves

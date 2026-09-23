@@ -36,22 +36,17 @@ API_KEY_ENV = "OPENAI_API_KEY"
 
 model = init_chat_model(**MODEL_SPEC, api_key=os.environ[API_KEY_ENV])
 
-def _tool_error(error: Exception, request) -> str | None:
-    """Hand a tool's own error text back to the model so it can act on it.
 
-    Only our deliberate ValueErrors — unknown venue, missing fixture, bad date.
-    Anything else propagates, rather than leaking internals into the chat.
-    """
-    if isinstance(error, ValueError):
-        return f"{request.tool_call['name']} failed: {error}"
-    return None
+def _tool_error(error: Exception, request) -> str:
+    """Return a safe error message for a failed tool call."""
+    return f"{request.tool_call['name']} failed. Please try again."
 
 
 agent = create_agent(
     model=model,
     tools=TOOLS_LIVE,
     system_prompt=SYSTEM_PROMPT,
-    # Without this a tool raising ValueError aborts the whole run, so the
-    # agent never sees messages like "no saved response for WFM R4".
+    # Without this a tool failure aborts the whole run, so the agent never
+    # sees messages like "no saved response for WFM R4".
     middleware=[log_recommendations, ToolErrorMiddleware(on_error=_tool_error)],
 )
