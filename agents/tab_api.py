@@ -460,6 +460,47 @@ def _fixture_identity(payload: dict, kind: str) -> tuple[str, str, int] | None:
     return (match[1], match[2], int(match[3])) if match else None
 
 
+def _assert_race_identity(
+    payload: dict, date: str, venue: str, race_number: int, source: str
+) -> None:
+    """Raise when a race payload does not match the requested identity."""
+    meeting = payload.get("meeting") or {}
+    actual = (
+        meeting.get("meetingDate"),
+        meeting.get("venueMnemonic"),
+        payload.get("raceNumber"),
+    )
+    requested = (date, venue.upper(), race_number)
+    if actual != requested:
+        have = (
+            f"{actual[1]} R{actual[2]} on {actual[0]}"
+            if all(value is not None for value in actual)
+            else "an unknown race"
+        )
+        raise ValueError(
+            f"asked for {requested[1]} R{requested[2]} on {requested[0]} but "
+            f"{source} returned {have}"
+        )
+
+
+def _assert_form_identity(
+    payload: dict, date: str, venue: str, race_number: int, source: str, kind: str
+) -> None:
+    """Raise when a form payload does not match the requested race."""
+    identity = _fixture_identity(payload, kind)
+    requested = (date, venue.upper(), race_number)
+    if identity != requested:
+        have = (
+            f"{identity[1]} R{identity[2]} on {identity[0]}"
+            if identity
+            else "an unknown race"
+        )
+        raise ValueError(
+            f"asked for {requested[1]} R{requested[2]} on {requested[0]} but "
+            f"{source} returned {have}"
+        )
+
+
 def _load_fixture(kind: str, date: str, venue: str, race_number: int | None) -> dict:
     """Return the saved response for this exact race, or say what's missing.
 
@@ -474,7 +515,12 @@ def _load_fixture(kind: str, date: str, venue: str, race_number: int | None) -> 
     }.get(kind)
 
     if specific and (FIXTURE_DIR / specific).is_file():
-        return json.loads((FIXTURE_DIR / specific).read_text())
+        payload = json.loads((FIXTURE_DIR / specific).read_text())
+        if kind == "race":
+            _assert_race_identity(payload, date, venue, race_number, f"fixture {specific}")
+        else:
+            _assert_form_identity(payload, date, venue, race_number, f"fixture {specific}", kind)
+        return payload
 
     payload = json.loads((FIXTURE_DIR / GENERIC_FIXTURES[kind]).read_text())
 
@@ -605,7 +651,9 @@ def fetch_race(
         raise ValueError(f"race_number must be 1-20. Got {race_number!r}.")
     url = f"{API_ROOT}/dates/{date}/meetings/{race_type}/{venue.upper()}/races/{race_number}"
     params = {"jurisdiction": jurisdiction.upper(), "returnOffers": "true", "returnPromo": "true"}
-    return _get(url, params, timeout, "race", date=date, venue=venue, race_number=race_number)
+    payload = _get(url, params, timeout, "race", date=date, venue=venue, race_number=race_number)
+    _assert_race_identity(payload, date, venue, race_number, "TAB")
+    return payload
 
 
 # Form is history: it doesn't change while we're looking at it, so cache it
@@ -649,6 +697,7 @@ def fetch_form(
     print()
     params = {"jurisdiction": jurisdiction.upper()}
     payload = _get(url, params, timeout, "form", date=date, venue=venue, race_number=race_number)
+    _assert_form_identity(payload, date, venue, race_number, "TAB", "form")
     _FORM_CACHE[key] = payload
     return payload
 
@@ -678,6 +727,7 @@ def fetch_race_form(
     print(url)
     params = {"jurisdiction": jurisdiction.upper()}
     payload = _get(url, params, timeout, "race_form", date=date, venue=venue, race_number=race_number)
+    _assert_form_identity(payload, date, venue, race_number, "TAB", "race_form")
 
     field: dict[int, dict] = {}
     for entry in payload.get("form") or []:
