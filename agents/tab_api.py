@@ -85,15 +85,9 @@ def normalize_meetings(
     state: str | None = "NSW",
     race_type: str = "R",
     upcoming_only: bool = True,
+    verbose: bool = False,
 ) -> list[dict]:
-    """Today's meetings, filtered to what we care about.
-
-    Args:
-        payload: the parsed meetings response.
-        state: keep only this location (e.g. "NSW"); None keeps every location.
-        race_type: "R" thoroughbred, "G" greyhound, "H" harness.
-        upcoming_only: drop races that have already been run.
-    """
+    """Return today's meetings filtered to what we care about."""
     meetings = []
     for meeting in payload.get("meetings") or []:
         if meeting.get("raceType") != race_type:
@@ -105,18 +99,29 @@ def normalize_meetings(
         for race in meeting.get("races") or []:
             if upcoming_only and race.get("raceStatus") in FINISHED_STATUSES:
                 continue
-            races.append(
-                {
+            scratched = [
+                s.get("runnerNumber") for s in (race.get("scratchings") or [])
+            ]
+            if verbose:
+                races.append(
+                    {
+                        "race_number": race.get("raceNumber"),
+                        "name": race.get("raceName"),
+                        "distance_m": race.get("raceDistance"),
+                        "start_time": race.get("raceStartTime"),
+                        "status": race.get("raceStatus"),
+                        "scratched": scratched,
+                    }
+                )
+            else:
+                compact_race = {
                     "race_number": race.get("raceNumber"),
                     "name": race.get("raceName"),
-                    "distance_m": race.get("raceDistance"),
                     "start_time": race.get("raceStartTime"),
-                    "status": race.get("raceStatus"),
-                    "scratched": [
-                        s.get("runnerNumber") for s in (race.get("scratchings") or [])
-                    ],
                 }
-            )
+                if scratched:
+                    compact_race["scratched"] = scratched
+                races.append(compact_race)
         if not races:
             continue
 

@@ -58,16 +58,30 @@ def _call(fn, *args, **kwargs):
 
 
 @tool
-def list_meetings(date: str | None = None, state: str = "NSW") -> list[dict]:
-    """List today's thoroughbred meetings, with the going and the races still to run.
-
-    Args:
-        date: Race day as YYYY-MM-DD. Defaults to today.
-        state: Australian state, e.g. NSW, VIC, QLD. Use "ALL" for every location.
-    """
+def list_meetings(
+    date: str | None = None,
+    state: str = "NSW",
+    venue: str | None = None,
+    venue_code: str | None = None,
+) -> list[dict]:
+    """List today's thoroughbred meetings; use venue or venue_code when known, and state=ALL only for a genuine worldwide what's-on-today request."""
     day = date or _today()
     payload = _call(fetch_meetings, day)
-    meetings = normalize_meetings(payload, state=None if state.upper() == "ALL" else state.upper())
+    meetings = normalize_meetings(
+        payload, state=None if state.upper() == "ALL" else state.upper()
+    )
+    if venue:
+        meetings = [
+            meeting
+            for meeting in meetings
+            if (meeting["venue"] or "").casefold() == venue.casefold()
+        ]
+    if venue_code:
+        meetings = [
+            meeting
+            for meeting in meetings
+            if meeting["venue_code"] == venue_code.upper()
+        ]
     if not meetings:
         raise ValueError(
             f"No thoroughbred meetings still to run in {state} on {day}. "
