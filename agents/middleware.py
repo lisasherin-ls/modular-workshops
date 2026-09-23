@@ -4,6 +4,8 @@ Two hooks, at two points in the loop:
 
     block_competitor_odds  before_model    -- a question about a rival's odds
                                               never reaches the model
+    block_gambling_harm     before_model    -- a gambling-harm request gets a
+                                              fixed support response
     log_recommendations    wrap_tool_call  -- every recommendation is recorded
                                               with the going it was based on
 
@@ -45,12 +47,28 @@ ODDS_TERMS = (
 
 _COMPETITOR_RE = re.compile("|".join(re.escape(name) for name in COMPETITORS), re.I)
 _ODDS_RE = re.compile(r"\b(" + "|".join(ODDS_TERMS) + r")\b", re.I)
+_GAMBLING_HARM_RE = re.compile(
+    r"(?:"
+    r"\b(?:win it back|recover(?:ing)? (?:my|the) losses|chase(?:ing)? losses)\b|"
+    r"\b(?:rent|mortgage|borrow(?:ed|ing)?|loan|debt|all my money|afford(?:able)?|can't afford|cannot afford)\b|"
+    r"\b(?:desperate|distress(?:ed)?|stress(?:ed)?|panic(?:ked|king)?|depressed|suicid(?:e|al))\b|"
+    r"\b(?:self[- ]?exclu(?:de|ded|ding|sion)|close my account|ban myself)\b|"
+    r"\b(?:set|reduce|lower|increase) (?:a )?(?:(?:deposit|loss|betting|gambling) )?limit\b|"
+    r"\b(?:deposit|loss|betting|gambling) limit\b"
+    r")",
+    re.I,
+)
 
 REFUSAL = (
     "I don't cover bookmakers' odds or prices — mine or anyone else's. "
     "What I can do is tell you which runners in a race suit the going and "
     "weather expected on the day, and show you the form behind it. "
     "Ask me about a race and I'll take you through the field."
+)
+
+SAFER_GAMBLING_RESPONSE = (
+    "I can't provide a betting tip here. "
+    "[COMPLIANCE-APPROVED SUPPORT AND SELF-EXCLUSION CHANNELS — INSERT BEFORE RELEASE]"
 )
 
 
@@ -68,6 +86,22 @@ def block_competitor_odds(state: AgentState, runtime: Runtime) -> dict | None:
     if _COMPETITOR_RE.search(last.text) or _ODDS_RE.search(last.text):
         # The refusal is a constant: user text is matched against, never echoed.
         return {"jump_to": "end", "messages": [AIMessage(content=REFUSAL)]}
+
+    return None
+
+
+@before_model(can_jump_to=["end"])
+def block_gambling_harm(state: AgentState, runtime: Runtime) -> dict | None:
+    """Return fixed support guidance when the user signals gambling harm."""
+    last = state["messages"][-1]
+    if not isinstance(last, HumanMessage):
+        return None
+
+    if _GAMBLING_HARM_RE.search(last.text):
+        return {
+            "jump_to": "end",
+            "messages": [AIMessage(content=SAFER_GAMBLING_RESPONSE)],
+        }
 
     return None
 
