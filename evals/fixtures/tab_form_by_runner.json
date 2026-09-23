@@ -1,0 +1,527 @@
+{
+  "runnerNumber": 1,
+  "runnerName": "DE ARMAS",
+  "prizeMoney": "$98453.00",
+  "last20Starts": "f11x4x",
+  "sire": "ARDROSSAN",
+  "dam": "REGAL WINKS (NZ)",
+  "age": 3,
+  "sex": "Filly",
+  "colour": "B",
+  "formComment": "Back after a long spell. Finished off last preparation 4th of 14 in the LR Karaka Millions 2yo at Ellerslie on January 24 over 1200m, on a slow track; 3.5 len behind Dream Roca with 55kg at $10. Won previous preparation first up scored a big 5 len win in a 2yo SWP at Otaki on September 26 over 800m on a heavy track defeating Spellbound carrying 55kg at $1.70. Finished seventh in a Randwick trial over 1045m on August 28. Monitor market moves.",
+  "formComments": [
+    {
+      "source": "TAB",
+      "title": "TAB",
+      "comment": "In Stronger Class FS(5). Back after a long spell. Finished off last preparation 4th of 14 in the LR Karaka Millions 2yo at Ellerslie on January 24 over 1200m, on a slow track; 3.5 len behind Dream Roca with 55kg at $10. Won previous preparation first up scored a big 5 len win in a 2yo SWP at Otaki on September 26 over 800m on a heavy track defeating Spellbound carrying 55kg at $1.70. Finished seventh in a Randwick trial over 1045m on August 28. Monitor market moves."
+    }
+  ],
+  "classLevel": "up",
+  "fieldStrength": 5,
+  "daysSinceLastRun": 242,
+  "handicapWeight": 61,
+  "blinkers": false,
+  "runsSinceSpell": 0,
+  "riderOrDriver": "Kerrin McEvoy",
+  "riderOrDriverSex": "Male",
+  "trainerName": "CHRIS WALLER",
+  "trainerLocation": "Rosehill",
+  "runnerStarts": {
+    "startSummaries": {
+      "overall": {
+        "numberOfStarts": 3,
+        "numberOfWins": 2,
+        "numberOfPlacings": 0
+      },
+      "track": {
+        "numberOfStarts": 0,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "firm": {
+        "numberOfStarts": 0,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "good": {
+        "numberOfStarts": 1,
+        "numberOfWins": 1,
+        "numberOfPlacings": 0
+      },
+      "dead": {
+        "numberOfStarts": 0,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "slow": {
+        "numberOfStarts": 1,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "soft": {
+        "numberOfStarts": 1,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "heavy": {
+        "numberOfStarts": 1,
+        "numberOfWins": 1,
+        "numberOfPlacings": 0
+      },
+      "distance": {
+        "numberOfStarts": 1,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "classSame": {
+        "numberOfStarts": 0,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      },
+      "classStronger": {
+        "numberOfStarts": 3,
+        "numberOfWins": 2,
+        "numberOfPlacings": 0
+      },
+      "firstUp": {
+        "numberOfStarts": 2,
+        "numberOfWins": 1,
+        "numberOfPlacings": 0
+      },
+      "secondUp": {
+        "numberOfStarts": 1,
+        "numberOfWins": 1,
+        "numberOfPlacings": 0
+      },
+      "trackDistance": {
+        "numberOfStarts": 0,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      }
+    },
+    "previousStarts": [
+      {
+        "startType": "Trial",
+        "startDate": "2026-08-28",
+        "raceNumber": 6,
+        "finishingPosition": "7",
+        "numberOfStarters": 9,
+        "draw": 0,
+        "margin": "6.16",
+        "venueAbbreviation": "RAND",
+        "skyRacing": {
+          "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2026/08/20260828RANR06.mp3",
+          "video": "https://mediatabs.skyracing.com.au/Race_Replay/2026/08/20260828RANR06T_V.mp4"
+        },
+        "distance": 1045,
+        "class": "OPEN",
+        "rider": "KERRIN MCEVOY",
+        "startingPosition": 0,
+        "odds": null,
+        "winnerOrSecond": "Whatalegacy",
+        "positionInRun": null,
+        "trackCondition": "Soft",
+        "time": "1:03.15",
+        "stewardsComment": null
+      },
+      {
+        "startType": "Trial",
+        "startDate": "2026-07-31",
+        "raceNumber": 7,
+        "finishingPosition": "2",
+        "numberOfStarters": 8,
+        "draw": 0,
+        "margin": "1.45",
+        "venueAbbreviation": "RAND",
+        "skyRacing": {
+          "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2026/07/20260731RANR07.mp3",
+          "video": "https://mediatabs.skyracing.com.au/Race_Replay/2026/07/20260731RANR07T_V.mp4"
+        },
+        "distance": 1045,
+        "class": "OPEN",
+        "rider": "SAM CLIPPERTON",
+        "startingPosition": 0,
+        "odds": null,
+        "winnerOrSecond": "Blessed Eagle",
+        "positionInRun": null,
+        "trackCondition": "Soft",
+        "time": "1:03.28",
+        "stewardsComment": null
+      },
+      {
+        "startType": "Trial",
+        "startDate": "2026-07-20",
+        "raceNumber": 15,
+        "finishingPosition": "6",
+        "numberOfStarters": 6,
+        "draw": 0,
+        "margin": "6.6",
+        "venueAbbreviation": "RAND",
+        "skyRacing": {
+          "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2026/07/20260720RANR15.mp3",
+          "video": "https://mediatabs.skyracing.com.au/Race_Replay/2026/07/20260720RANR15T_V.mp4"
+        },
+        "distance": 745,
+        "class": "OPEN",
+        "rider": "JAMES MCDONALD",
+        "startingPosition": 0,
+        "odds": null,
+        "winnerOrSecond": "Shiki",
+        "positionInRun": null,
+        "trackCondition": "Heavy",
+        "time": "0:44.88",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastStarts",
+        "startDate": "2026-01-24",
+        "raceNumber": 4,
+        "finishingPosition": "4",
+        "numberOfStarters": 14,
+        "draw": 0,
+        "margin": "3.37",
+        "venueAbbreviation": "ELLS",
+        "skyRacing": {
+          "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2026/01/20260124ELRR04.mp3",
+          "video": "https://mediatabs.skyracing.com.au/Race_Replay/2026/01/20260124ELRR04_V.mp4"
+        },
+        "distance": 1200,
+        "class": "2YO SW LR",
+        "handicap": "55.0",
+        "rider": "Kelly Myers",
+        "startingPosition": 9,
+        "odds": "10.00",
+        "winnerOrSecond": "DREAM ROCA",
+        "positionInRun": "8-8",
+        "trackCondition": "Soft",
+        "time": "1:12.59",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastStarts",
+        "startDate": "2025-11-22",
+        "raceNumber": 4,
+        "finishingPosition": "1",
+        "numberOfStarters": 9,
+        "draw": 0,
+        "margin": "1.8",
+        "venueAbbreviation": "NZ",
+        "skyRacing": {
+          "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2025/11/20251122PKER04.mp3",
+          "video": "https://mediatabs.skyracing.com.au/Race_Replay/2025/11/20251122PKER04_V.mp4"
+        },
+        "distance": 1100,
+        "class": "2YO SW LR",
+        "handicap": "55.0",
+        "rider": "Kelly Myers",
+        "startingPosition": 7,
+        "odds": "6.40",
+        "winnerOrSecond": "HARVEY WALLBANGER",
+        "positionInRun": "2-2-2",
+        "trackCondition": "Good",
+        "time": "1:04.52",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastStarts",
+        "startDate": "2025-09-26",
+        "raceNumber": 2,
+        "finishingPosition": "1",
+        "numberOfStarters": 3,
+        "draw": 0,
+        "margin": "4.8",
+        "venueAbbreviation": "OTK",
+        "skyRacing": {
+          "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2025/09/20250926OTKR02.mp3",
+          "video": "https://mediatabs.skyracing.com.au/Race_Replay/2025/09/20250926OTKR02_V.mp4"
+        },
+        "distance": 800,
+        "class": "2YO SW",
+        "handicap": "55.0",
+        "rider": "Kelly Myers",
+        "startingPosition": 2,
+        "odds": "1.70",
+        "winnerOrSecond": "SPELLBOUND",
+        "positionInRun": "1-1-2",
+        "trackCondition": "Heavy",
+        "time": "0:48.80",
+        "stewardsComment": null
+      }
+    ]
+  },
+  "trainerStarts": {
+    "startSummaries": {
+      "track": {
+        "numberOfStarts": 3348,
+        "numberOfWins": 430,
+        "numberOfPlacings": 860
+      },
+      "region": {
+        "numberOfStarts": 27162,
+        "numberOfWins": 3711,
+        "numberOfPlacings": 6873
+      },
+      "last30Days": {
+        "numberOfStarts": 250,
+        "numberOfWins": 28,
+        "numberOfPlacings": 65
+      },
+      "last12Months": {
+        "numberOfStarts": 2738,
+        "numberOfWins": 378,
+        "numberOfPlacings": 702
+      },
+      "jockey": {
+        "numberOfStarts": 1839,
+        "numberOfWins": 217,
+        "numberOfPlacings": 428
+      }
+    },
+    "previousStarts": [
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-19",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "CAUL",
+        "distance": 1800,
+        "class": null,
+        "rider": "BEN MELHAM",
+        "startingPosition": 0,
+        "odds": "6.00",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "BIRDMAN",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-19",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "RAND",
+        "distance": 1600,
+        "class": null,
+        "rider": "JAMES MCDONALD",
+        "startingPosition": 0,
+        "odds": "2.50",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "DECLICHY BOULEVARD",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-19",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "RAND",
+        "distance": 1600,
+        "class": null,
+        "rider": "JAMES MCDONALD",
+        "startingPosition": 0,
+        "odds": "1.16",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "AUTUMN GLOW",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-19",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "CAUL",
+        "distance": 1400,
+        "class": null,
+        "rider": "BEN MELHAM",
+        "startingPosition": 0,
+        "odds": "5.00",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "ANGEL CAPITAL",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-19",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "EFRM",
+        "distance": 1000,
+        "class": null,
+        "rider": "SIENA GRIMA",
+        "startingPosition": 0,
+        "odds": "5.00",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "VANESSI",
+        "stewardsComment": null
+      }
+    ]
+  },
+  "riderDriverStarts": {
+    "startSummaries": {
+      "track": {
+        "numberOfStarts": 1349,
+        "numberOfWins": 175,
+        "numberOfPlacings": 322
+      },
+      "region": {
+        "numberOfStarts": 9346,
+        "numberOfWins": 1230,
+        "numberOfPlacings": 2314
+      },
+      "last30Days": {
+        "numberOfStarts": 50,
+        "numberOfWins": 8,
+        "numberOfPlacings": 14
+      },
+      "last12Months": {
+        "numberOfStarts": 505,
+        "numberOfWins": 54,
+        "numberOfPlacings": 102
+      },
+      "runner": {
+        "numberOfStarts": 0,
+        "numberOfWins": 0,
+        "numberOfPlacings": 0
+      }
+    },
+    "previousStarts": [
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-19",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "RAND",
+        "distance": 1400,
+        "class": null,
+        "startingPosition": 0,
+        "odds": "3.90",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "BANGKOK HOTTIE",
+        "trainer": "DAVID PAYNE",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-12",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "ROSE",
+        "distance": 1300,
+        "class": null,
+        "startingPosition": 0,
+        "odds": "2.00",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "SKYHOOK",
+        "trainer": "GERALD RYAN & STERLING ALEXIOU",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-10",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "HAWK",
+        "distance": 1500,
+        "class": null,
+        "startingPosition": 0,
+        "odds": "2.20",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "POWER BROKER",
+        "trainer": "EDWARD O'ROURKE",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-09-05",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "RAND",
+        "distance": 1200,
+        "class": null,
+        "startingPosition": 0,
+        "odds": "8.50",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "BANGKOK HOTTIE",
+        "trainer": "DAVID PAYNE",
+        "stewardsComment": null
+      },
+      {
+        "startType": "LastWins",
+        "startDate": "2026-08-29",
+        "raceNumber": 0,
+        "finishingPosition": "0",
+        "numberOfStarters": 0,
+        "draw": 0,
+        "margin": null,
+        "venueAbbreviation": "ROSE",
+        "distance": 1200,
+        "class": null,
+        "startingPosition": 0,
+        "odds": "10.00",
+        "winnerOrSecond": null,
+        "positionInRun": null,
+        "time": null,
+        "runner": "LISZTOMANIA",
+        "trainer": "TODD PAYNE",
+        "stewardsComment": null
+      }
+    ]
+  },
+  "winningDistances": [
+    {
+      "winningDistance": 800,
+      "numberOfWinsAtDistance": 1
+    },
+    {
+      "winningDistance": 1100,
+      "numberOfWinsAtDistance": 1
+    }
+  ],
+  "_links": {
+    "self": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/1?jurisdiction=NSW"
+  }
+}

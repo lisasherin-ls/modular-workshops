@@ -1,0 +1,3138 @@
+{
+  "raceNumber": 2,
+  "spectrumId": "WARWICK_F0",
+  "raceName": "EXCEEDANCE @ VINERY STUD HANDICAP",
+  "raceDistance": 1200,
+  "trackDirection": "clockwise",
+  "meeting": {
+    "meetingName": "WARWICK FARM",
+    "venueMnemonic": "WFM",
+    "meetingDate": "2026-09-23",
+    "location": "NSW",
+    "raceType": "R",
+    "weatherCondition": "OCAST",
+    "trackCondition": "SOFT5",
+    "sellCode": {
+      "meetingCode": "S",
+      "scheduledType": "R"
+    }
+  },
+  "skyRacing": {
+    "audio": "https://mediatabs.skyracing.com.au/Audio_Replay/2026/09/20260923WAFR02.mp3",
+    "video": "https://mediatabs.skyracing.com.au/Race_Replay/2026/09/20260923WAFR02_V.mp4"
+  },
+  "hasParimutuel": true,
+  "hasFixedOdds": true,
+  "broadcastChannel": null,
+  "broadcastChannels": [],
+  "hasForm": true,
+  "hasEarlySpeedRatings": true,
+  "allIn": false,
+  "cashOutEligibility": "Enabled",
+  "allowBundle": false,
+  "willHaveFixedOdds": true,
+  "fixedOddsOnlineBetting": true,
+  "raceStartTime": "2026-09-23T04:25:00.000Z",
+  "raceClassConditions": "3YO BM68",
+  "apprenticesCanClaim": true,
+  "prizeMoney": "$60000.00",
+  "raceStatus": "Normal",
+  "substitute": "NR",
+  "results": [],
+  "pools": [
+    {
+      "wageringProduct": "Win",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "poolHistory": [
+        {
+          "poolTotal": 20253,
+          "poolTotalTime": "2026-09-23T04:22:06.000Z",
+          "specialDisplayIndicator": false
+        },
+        {
+          "poolTotal": 19689.5,
+          "poolTotalTime": "2026-09-23T04:21:51.000Z",
+          "specialDisplayIndicator": false
+        },
+        {
+          "poolTotal": 19689.5,
+          "poolTotalTime": "2026-09-23T04:21:51.000Z",
+          "specialDisplayIndicator": false
+        },
+        {
+          "poolTotal": 19243.5,
+          "poolTotalTime": "2026-09-23T04:21:37.000Z",
+          "specialDisplayIndicator": false
+        },
+        {
+          "poolTotal": 14178,
+          "poolTotalTime": "2026-09-23T04:09:36.000Z",
+          "specialDisplayIndicator": true
+        }
+      ],
+      "poolTotal": 19689.5,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "Place",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "poolTotal": 7685,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "Quinella",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "_links": {
+        "approximates": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/pools/Quinella/approximates?jurisdiction=NSW"
+      },
+      "poolTotal": 4481.5,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "Exacta",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "_links": {
+        "approximates": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/pools/Exacta/approximates?jurisdiction=NSW"
+      },
+      "poolTotal": 1559.5,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "Duet",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "_links": {
+        "approximates": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/pools/Duet/approximates?jurisdiction=NSW"
+      },
+      "poolTotal": 570,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "Trifecta",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "poolTotal": 7524,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "FirstFour",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        }
+      ],
+      "poolTotal": 2452.5,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "RunningDouble",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        },
+        {
+          "legNumber": 2,
+          "raceNumber": 3,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T05:00:00.000Z"
+        }
+      ],
+      "poolTotal": 1400.5,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "EarlyQuaddie",
+      "legNumber": 2,
+      "poolStatusCode": "Closed",
+      "cashOutEligibility": "Enabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 1,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T03:50:00.000Z"
+        },
+        {
+          "legNumber": 2,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        },
+        {
+          "legNumber": 3,
+          "raceNumber": 3,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T05:00:00.000Z"
+        },
+        {
+          "legNumber": 4,
+          "raceNumber": 4,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T05:35:00.000Z"
+        }
+      ],
+      "poolTotal": 21420.46,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": "NYD"
+    },
+    {
+      "wageringProduct": "Big6",
+      "name": "SR",
+      "legNumber": 1,
+      "poolStatusCode": "Open",
+      "cashOutEligibility": "Disabled",
+      "legs": [
+        {
+          "legNumber": 1,
+          "raceNumber": 2,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T04:25:00.000Z"
+        },
+        {
+          "legNumber": 2,
+          "raceNumber": 3,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T05:00:00.000Z"
+        },
+        {
+          "legNumber": 3,
+          "raceNumber": 4,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T05:35:00.000Z"
+        },
+        {
+          "legNumber": 4,
+          "raceNumber": 5,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T06:10:00.000Z"
+        },
+        {
+          "legNumber": 5,
+          "raceNumber": 6,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T06:45:00.000Z"
+        },
+        {
+          "legNumber": 6,
+          "raceNumber": 7,
+          "venueMnemonic": "WFM",
+          "raceType": "R",
+          "startTime": "2026-09-23T07:20:00.000Z"
+        }
+      ],
+      "poolTotal": 778.5,
+      "jackpot": 0,
+      "cominglingHost": "NSW",
+      "cominglingHostName": "NSW TAB",
+      "cominglingGuests": true,
+      "substitute": 6
+    }
+  ],
+  "allowMulti": true,
+  "allowParimutuelPlace": true,
+  "parimutuelPlaceStatus": "Open",
+  "allowFixedOddsPlace": true,
+  "numberOfPlaces": 3,
+  "numberOfFixedOddsPlaces": 3,
+  "runners": [
+    {
+      "runnerName": "DE ARMAS",
+      "runnerNumber": 1,
+      "fixedOdds": {
+        "returnWin": 81,
+        "returnWinTime": "2026-09-23T04:19:56.000Z",
+        "returnWinOpen": 15,
+        "returnWinOpenDaily": 34,
+        "returnPlace": 13,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154181,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 61,
+            "returnWinTime": "2026-09-23T04:16:09.000Z"
+          },
+          {
+            "returnWin": 51,
+            "returnWinTime": "2026-09-23T02:35:44.000Z"
+          },
+          {
+            "returnWin": 61,
+            "returnWinTime": "2026-09-23T01:34:55.000Z"
+          },
+          {
+            "returnWin": 51,
+            "returnWinTime": "2026-09-22T23:43:26.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-21T06:12:44.305Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-21T05:55:43.502Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-21T07:23:29.276Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 51,
+            "returnWinTime": "2026-09-22T23:43:25.551Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 41,
+            "returnWinTime": "2026-09-22T23:31:55.884Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-22T00:42:09.293Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-22T00:43:42.210Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-22T00:47:00.864Z"
+          },
+          {
+            "returnWin": 61,
+            "returnWinTime": "2026-09-23T01:34:55.151Z"
+          },
+          {
+            "returnWin": 51,
+            "returnWinTime": "2026-09-23T02:35:43.840Z"
+          },
+          {
+            "returnWin": 61,
+            "returnWinTime": "2026-09-23T04:16:09.149Z"
+          },
+          {
+            "returnWin": 81,
+            "returnWinTime": "2026-09-23T04:19:55.539Z"
+          },
+          {
+            "returnWin": 34,
+            "returnWinTime": "2026-09-22T05:53:14.307Z"
+          }
+        ],
+        "percentageChange": 33,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 45.7,
+        "returnPlace": 9.1,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 44.5,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 43.2,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 41.9,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 39.8,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 37.4,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 3
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/NAVY%20BLUE%2C%20GOLD%20HOOPS%2C%20WHITE%20SLEEVES%20AND%20CAP",
+      "trainerName": "C Waller",
+      "vacantBox": false,
+      "trainerFullName": "CHRIS WALLER",
+      "barrierNumber": 10,
+      "riderDriverName": "K McEvoy",
+      "riderDriverFullName": "KERRIN MCEVOY",
+      "handicapWeight": 61,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "11x4x",
+      "tcdwIndicators": "C W",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 78,
+      "techFormRating": 0,
+      "totalRatingPoints": 5,
+      "earlySpeedRating": 72,
+      "earlySpeedRatingBand": "LEADER",
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/1?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "PHILLIP ISLAND",
+      "runnerNumber": 2,
+      "fixedOdds": {
+        "returnWin": 18,
+        "returnWinTime": "2026-09-23T04:21:22.000Z",
+        "returnWinOpen": 8,
+        "returnWinOpenDaily": 12,
+        "returnPlace": 3.8,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154182,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-23T04:16:07.000Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-23T03:56:54.000Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-22T23:43:31.000Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T23:31:56.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 8,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T06:17:35.960Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T07:23:29.276Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-22T23:43:31.301Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 9.5,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 9,
+            "returnWinTime": "2026-09-21T05:55:43.501Z"
+          },
+          {
+            "returnWin": 10,
+            "returnWinTime": "2026-09-21T06:05:30.889Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 8.5,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-22T22:18:40.221Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T22:53:13.705Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-22T23:01:18.604Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-22T23:02:45.333Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T23:31:55.884Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-22T00:25:27.745Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T00:42:13.611Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-22T00:47:00.864Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T00:52:34.720Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-23T03:56:54.105Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-23T04:16:07.024Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-23T04:21:21.907Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-22T05:53:14.307Z"
+          }
+        ],
+        "percentageChange": 13,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 14.5,
+        "returnPlace": 3.4,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 14.2,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 14.7,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 14.4,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 16.4,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 2
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/NAVY%20AND%20WHITE%20HALVES%2C%20NAVY%20CAP",
+      "trainerName": "M Price & M Jnr",
+      "vacantBox": false,
+      "trainerFullName": "MICK PRICE & MICHAEL KENT JNR",
+      "barrierNumber": 7,
+      "riderDriverName": "T Berry",
+      "riderDriverFullName": "TOMMY BERRY",
+      "handicapWeight": 60,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "8x514",
+      "tcdwIndicators": "CD",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 97,
+      "techFormRating": 0,
+      "totalRatingPoints": 7,
+      "earlySpeedRating": 68,
+      "earlySpeedRatingBand": "LEADER",
+      "fastForm": [
+        {
+          "type": "TopRated",
+          "keywords": null,
+          "ranking": 1
+        }
+      ],
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/2?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "BLESSED EAGLE",
+      "runnerNumber": 3,
+      "fixedOdds": {
+        "returnWin": 4.6,
+        "returnWinTime": "2026-09-23T04:19:56.000Z",
+        "returnWinOpen": 8,
+        "returnWinOpenDaily": 6,
+        "returnPlace": 1.65,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154183,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 4.8,
+            "returnWinTime": "2026-09-23T04:10:15.000Z"
+          },
+          {
+            "returnWin": 5,
+            "returnWinTime": "2026-09-22T23:02:45.000Z"
+          },
+          {
+            "returnWin": 5.5,
+            "returnWinTime": "2026-09-22T23:01:19.000Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-22T23:00:33.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-21T05:55:43.501Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-21T06:12:47.430Z"
+          },
+          {
+            "returnWin": 8,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-22T21:50:24.195Z"
+          },
+          {
+            "returnWin": 5.5,
+            "returnWinTime": "2026-09-21T06:12:44.305Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-22T23:00:32.651Z"
+          },
+          {
+            "returnWin": 5.5,
+            "returnWinTime": "2026-09-22T23:01:18.651Z"
+          },
+          {
+            "returnWin": 5,
+            "returnWinTime": "2026-09-22T23:02:45.333Z"
+          },
+          {
+            "returnWin": 4.8,
+            "returnWinTime": "2026-09-23T04:10:15.098Z"
+          },
+          {
+            "returnWin": 4.6,
+            "returnWinTime": "2026-09-23T04:19:55.539Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": -4,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 5.1,
+        "returnPlace": 2.7,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 5.1,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 5.1,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 5,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 4.7,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 4.6,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 0
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/WHITE%2C%20MAROON%20BAND%2C%20ARMBANDS%20AND%20CAP",
+      "trainerName": "G Waterhouse & A Bott",
+      "vacantBox": false,
+      "trainerFullName": "GAI WATERHOUSE & ADRIAN BOTT",
+      "barrierNumber": 11,
+      "riderDriverName": "C Schofield",
+      "riderDriverFullName": "CHAD SCHOFIELD",
+      "handicapWeight": 59.5,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "f13",
+      "tcdwIndicators": "TCdW",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 96,
+      "techFormRating": 0,
+      "totalRatingPoints": 3,
+      "earlySpeedRating": 100,
+      "earlySpeedRatingBand": "LEADER",
+      "fastForm": [
+        {
+          "type": "LikelyLeader",
+          "keywords": null,
+          "ranking": null
+        }
+      ],
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/3?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "SKY DECK",
+      "runnerNumber": 4,
+      "fixedOdds": {
+        "returnWin": 19,
+        "returnWinTime": "2026-09-23T04:21:22.000Z",
+        "returnWinOpen": 11,
+        "returnWinOpenDaily": 13,
+        "returnPlace": 4,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154184,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-23T04:19:56.000Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-23T04:10:15.000Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-23T03:56:54.000Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-23T01:34:55.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T05:55:56.654Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-21T06:04:57.443Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T06:13:40.864Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T07:23:29.276Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-21T05:55:46.189Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T23:43:25.551Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T07:24:01.428Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T23:01:18.651Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-22T23:03:23.793Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-22T00:42:09.293Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-23T01:34:55.151Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-23T03:56:54.105Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-23T04:10:15.098Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-23T04:19:55.539Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-23T04:21:21.907Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": 19,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 21.2,
+        "returnPlace": 4.3,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 21.7,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 21.9,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 21.6,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 20.8,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 21.9,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": -2
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/BOTTLE%20GREEN%2C%20WHITE%20CHECKED%20SLEEVES%2C%20WHITE%20CAP",
+      "trainerName": "P Snowden",
+      "vacantBox": false,
+      "trainerFullName": "PETER SNOWDEN",
+      "barrierNumber": 9,
+      "riderDriverName": "T Sherry",
+      "riderDriverFullName": "TOM SHERRY",
+      "handicapWeight": 59.5,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "58x11",
+      "tcdwIndicators": "CD",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 94,
+      "techFormRating": 0,
+      "totalRatingPoints": 1,
+      "earlySpeedRating": 58,
+      "earlySpeedRatingBand": "MIDFIELD",
+      "fastForm": [
+        {
+          "type": "SectionalStar",
+          "keywords": null,
+          "ranking": null
+        }
+      ],
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/4?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "SATIN SUMMER",
+      "runnerNumber": 5,
+      "fixedOdds": {
+        "returnWin": 41,
+        "returnWinTime": "2026-09-23T04:21:22.000Z",
+        "returnWinOpen": 11,
+        "returnWinOpenDaily": 23,
+        "returnPlace": 7,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154185,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 34,
+            "returnWinTime": "2026-09-23T03:56:54.000Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-23T02:32:50.000Z"
+          },
+          {
+            "returnWin": 34,
+            "returnWinTime": "2026-09-22T23:49:51.000Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-22T23:43:26.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T06:12:47.430Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-21T06:04:57.443Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-21T06:13:43.025Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-22T23:43:25.551Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-21T06:17:35.960Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-21T06:36:43.773Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-21T05:55:46.157Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-22T23:01:18.604Z"
+          },
+          {
+            "returnWin": 34,
+            "returnWinTime": "2026-09-22T23:49:51.167Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-22T00:52:34.720Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-23T02:32:49.960Z"
+          },
+          {
+            "returnWin": 34,
+            "returnWinTime": "2026-09-23T03:56:54.105Z"
+          },
+          {
+            "returnWin": 41,
+            "returnWinTime": "2026-09-23T04:21:21.907Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-22T05:53:14.307Z"
+          }
+        ],
+        "percentageChange": 21,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 33,
+        "returnPlace": 5.5,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 34.8,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 34.1,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 33.7,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 32.3,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 30.2,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": -5
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/TARTAN%2C%20GREEN%20SLEEVES%2C%20GREEN%20AND%20DARK%20BLUE%20QUARTERED%20CAP",
+      "trainerName": "M Freedman",
+      "vacantBox": false,
+      "trainerFullName": "MICHAEL FREEDMAN",
+      "barrierNumber": 2,
+      "riderDriverName": "R King",
+      "riderDriverFullName": "RACHEL KING",
+      "handicapWeight": 58.5,
+      "harnessHandicap": null,
+      "blinkers": true,
+      "claimAmount": -1,
+      "last5Starts": "15x30",
+      "tcdwIndicators": "C w",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 87,
+      "techFormRating": 0,
+      "totalRatingPoints": 3,
+      "earlySpeedRating": 61,
+      "earlySpeedRatingBand": "LEADER",
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/5?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "PEYTON",
+      "runnerNumber": 6,
+      "fixedOdds": {
+        "returnWin": 2.1,
+        "returnWinTime": "2026-09-23T04:21:22.000Z",
+        "returnWinOpen": 2.8,
+        "returnWinOpenDaily": 2.2,
+        "returnPlace": 1.24,
+        "isFavouriteWin": true,
+        "isFavouritePlace": true,
+        "bettingStatus": "Open",
+        "propositionNumber": 154186,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 2.15,
+            "returnWinTime": "2026-09-23T04:19:56.000Z"
+          },
+          {
+            "returnWin": 2.2,
+            "returnWinTime": "2026-09-23T03:56:54.000Z"
+          },
+          {
+            "returnWin": 2.25,
+            "returnWinTime": "2026-09-23T01:34:55.000Z"
+          },
+          {
+            "returnWin": 2.3,
+            "returnWinTime": "2026-09-22T23:31:56.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 2.8,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 2.9,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 2.8,
+            "returnWinTime": "2026-09-21T06:13:40.864Z"
+          },
+          {
+            "returnWin": 2.7,
+            "returnWinTime": "2026-09-21T06:36:43.773Z"
+          },
+          {
+            "returnWin": 2.25,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 2.2,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 2.6,
+            "returnWinTime": "2026-09-21T05:55:43.471Z"
+          },
+          {
+            "returnWin": 2.7,
+            "returnWinTime": "2026-09-21T06:05:30.889Z"
+          },
+          {
+            "returnWin": 2.25,
+            "returnWinTime": "2026-09-22T23:00:06.860Z"
+          },
+          {
+            "returnWin": 2.3,
+            "returnWinTime": "2026-09-22T23:31:55.884Z"
+          },
+          {
+            "returnWin": 2.25,
+            "returnWinTime": "2026-09-23T01:34:55.151Z"
+          },
+          {
+            "returnWin": 2.2,
+            "returnWinTime": "2026-09-23T03:56:54.105Z"
+          },
+          {
+            "returnWin": 2.15,
+            "returnWinTime": "2026-09-23T04:19:55.539Z"
+          },
+          {
+            "returnWin": 2.1,
+            "returnWinTime": "2026-09-23T04:21:21.907Z"
+          },
+          {
+            "returnWin": 2.2,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": -2,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 2.3,
+        "returnPlace": 1.4,
+        "returnExact2": 0,
+        "isFavouriteWin": true,
+        "isFavouritePlace": true,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 2.3,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 2.3,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 2.2,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 2.4,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 2.4,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 0
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/RED%2C%20WHITE%20GATECRASHER",
+      "trainerName": "J O'Shea & T Charlton",
+      "vacantBox": false,
+      "trainerFullName": "JOHN O'SHEA & TOM CHARLTON",
+      "barrierNumber": 1,
+      "riderDriverName": "Z Lloyd",
+      "riderDriverFullName": "ZAC LLOYD",
+      "handicapWeight": 58,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "532x1",
+      "tcdwIndicators": "tCdw",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 98,
+      "techFormRating": 0,
+      "totalRatingPoints": 1,
+      "earlySpeedRating": 57,
+      "earlySpeedRatingBand": "MIDFIELD",
+      "fastForm": [
+        {
+          "type": "Rocket",
+          "keywords": null,
+          "ranking": null
+        },
+        {
+          "type": "TopRated",
+          "keywords": null,
+          "ranking": 3
+        }
+      ],
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/6?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "REACHIN' OUT",
+      "runnerNumber": 7,
+      "fixedOdds": {
+        "returnWin": 6.5,
+        "returnWinTime": "2026-09-23T01:34:55.000Z",
+        "returnWinOpen": 6,
+        "returnWinOpenDaily": 7,
+        "returnPlace": 2,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154187,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-22T23:31:56.000Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-22T23:03:44.000Z"
+          },
+          {
+            "returnWin": 7,
+            "returnWinTime": "2026-09-22T23:03:24.000Z"
+          },
+          {
+            "returnWin": 7.5,
+            "returnWinTime": "2026-09-22T23:01:19.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 7,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-21T05:55:43.501Z"
+          },
+          {
+            "returnWin": 7.5,
+            "returnWinTime": "2026-09-21T07:10:50.963Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-21T06:05:30.889Z"
+          },
+          {
+            "returnWin": 7.5,
+            "returnWinTime": "2026-09-22T23:01:18.651Z"
+          },
+          {
+            "returnWin": 7,
+            "returnWinTime": "2026-09-22T23:03:23.793Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-22T23:03:43.763Z"
+          },
+          {
+            "returnWin": 6,
+            "returnWinTime": "2026-09-22T23:31:55.884Z"
+          },
+          {
+            "returnWin": 6.5,
+            "returnWinTime": "2026-09-23T01:34:55.151Z"
+          },
+          {
+            "returnWin": 7,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": 8,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 7.2,
+        "returnPlace": 2.1,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 7.4,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 7.3,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 7.7,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 7.7,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 8.3,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": -3
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/AQUAMARINE",
+      "trainerName": "G Waterhouse & A Bott",
+      "vacantBox": false,
+      "trainerFullName": "GAI WATERHOUSE & ADRIAN BOTT",
+      "barrierNumber": 3,
+      "riderDriverName": "T Clark",
+      "riderDriverFullName": "TIM CLARK",
+      "handicapWeight": 58,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "f17x9",
+      "tcdwIndicators": "C W",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 100,
+      "techFormRating": 0,
+      "totalRatingPoints": 8,
+      "earlySpeedRating": 48,
+      "earlySpeedRatingBand": "MIDFIELD",
+      "fastForm": [
+        {
+          "type": "TopRated",
+          "keywords": null,
+          "ranking": 2
+        }
+      ],
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/7?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "CONSULATE",
+      "runnerNumber": 8,
+      "fixedOdds": {
+        "returnWin": 26,
+        "returnWinTime": "2026-09-23T04:21:22.000Z",
+        "returnWinOpen": 8,
+        "returnWinOpenDaily": 15,
+        "returnPlace": 5,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154188,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-23T03:56:54.000Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-23T02:35:44.000Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T23:43:26.000Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-22T23:31:56.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 8,
+            "returnWinTime": "2026-09-21T05:55:03.418Z"
+          },
+          {
+            "returnWin": 9,
+            "returnWinTime": "2026-09-21T05:55:43.502Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T07:24:01.428Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T23:43:25.551Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T06:36:43.773Z"
+          },
+          {
+            "returnWin": 8.5,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T22:18:40.221Z"
+          },
+          {
+            "returnWin": 9.5,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 10,
+            "returnWinTime": "2026-09-21T06:05:30.889Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-22T23:01:18.604Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-22T23:01:18.651Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T23:03:43.763Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-22T23:31:55.884Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T00:42:09.820Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-22T00:42:13.611Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T00:47:00.864Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-23T02:35:43.840Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-23T03:56:54.105Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-23T04:21:21.907Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": 13,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 16.1,
+        "returnPlace": 3.7,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 15.9,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 15.3,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 14.8,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 13.9,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 1
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/LIME%20GREEN%2C%20DARK%20GREEN%20SHAMROCK%2C%20BLACK%20AND%20WHITE%20CHECKED%20SLEEVES%20AND%20CAP",
+      "trainerName": "C Waller",
+      "vacantBox": false,
+      "trainerFullName": "CHRIS WALLER",
+      "barrierNumber": 6,
+      "riderDriverName": "J McDonald",
+      "riderDriverFullName": "JAMES MCDONALD",
+      "handicapWeight": 57.5,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "6x21x",
+      "tcdwIndicators": "C w",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 87,
+      "techFormRating": 0,
+      "totalRatingPoints": 0,
+      "earlySpeedRating": 46,
+      "earlySpeedRatingBand": "MIDFIELD",
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/8?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "THE THORNCASTER",
+      "runnerNumber": 9,
+      "fixedOdds": {
+        "returnWin": 21,
+        "returnWinTime": "2026-09-23T04:21:22.000Z",
+        "returnWinOpen": 15,
+        "returnWinOpenDaily": 19,
+        "returnPlace": 4.4,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154189,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T23:05:26.000Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-22T23:02:45.000Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-22T23:01:19.000Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T06:07:29.000Z",
+            "isPreviousDay": true
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T07:24:01.428Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-21T05:55:43.471Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T05:55:49.332Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-21T07:23:29.276Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T05:55:03.403Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-21T06:05:30.889Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-22T23:01:18.604Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-22T23:02:45.333Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T23:05:26.174Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-21T23:02:13.551Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T00:42:13.611Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-22T00:46:12.127Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-23T04:21:21.907Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T06:07:28.794Z"
+          }
+        ],
+        "percentageChange": 11,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 19.5,
+        "returnPlace": 3.7,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 20.7,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 21.5,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 20.8,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 19.7,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": -6
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/BLACK%2C%20ORANGE%20CHECKS%2C%20BENNETT%20RACING%20LOGO%2C%20WHITE%20CHECKED%20SLEEVES%2C%20CHECKED%20CAP",
+      "trainerName": "C Maher",
+      "vacantBox": false,
+      "trainerFullName": "CIARON MAHER",
+      "barrierNumber": 8,
+      "riderDriverName": "S Clipperton",
+      "riderDriverFullName": "SAM CLIPPERTON",
+      "handicapWeight": 57.5,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "426x1",
+      "tcdwIndicators": "CDw",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 94,
+      "techFormRating": 0,
+      "totalRatingPoints": 1,
+      "earlySpeedRating": 52,
+      "earlySpeedRatingBand": "MIDFIELD",
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/9?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "HARRYBEGOOD",
+      "runnerNumber": 10,
+      "fixedOdds": {
+        "returnWin": 10,
+        "returnWinTime": "2026-09-23T01:34:55.000Z",
+        "returnWinOpen": 26,
+        "returnWinOpenDaily": 12,
+        "returnPlace": 2.6,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154190,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 9.5,
+            "returnWinTime": "2026-09-22T23:43:31.000Z"
+          },
+          {
+            "returnWin": 9,
+            "returnWinTime": "2026-09-22T23:01:19.000Z"
+          },
+          {
+            "returnWin": 10,
+            "returnWinTime": "2026-09-22T23:00:07.000Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-22T18:18:14.000Z",
+            "isPreviousDay": true
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-21T05:55:56.654Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T06:13:43.025Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-21T06:04:57.443Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-21T05:55:35.738Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T07:23:29.276Z"
+          },
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-21T05:55:46.157Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-21T05:55:03.403Z"
+          },
+          {
+            "returnWin": 9.5,
+            "returnWinTime": "2026-09-22T23:43:31.301Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 10,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 10,
+            "returnWinTime": "2026-09-22T23:00:06.860Z"
+          },
+          {
+            "returnWin": 9,
+            "returnWinTime": "2026-09-22T23:01:18.604Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-22T00:43:42.210Z"
+          },
+          {
+            "returnWin": 11,
+            "returnWinTime": "2026-09-22T00:46:12.127Z"
+          },
+          {
+            "returnWin": 10,
+            "returnWinTime": "2026-09-23T01:34:55.151Z"
+          },
+          {
+            "returnWin": 12,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": 5,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 10.5,
+        "returnPlace": 2.4,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 10.5,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 10.9,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 12.4,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 12.1,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 12.5,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 0
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/BOTTLE%20GREEN%2C%20BLACK%20LIGHTNING%20BOLT%2C%20EMERALD%20GREEN%20SLEEVES%2C%20BOTTLE%20GREEN%20CAP%2C%20BLACK%20LIGHTNING%20BOLT",
+      "trainerName": "K Lees",
+      "vacantBox": false,
+      "trainerFullName": "KRIS LEES",
+      "barrierNumber": 4,
+      "riderDriverName": "J Collett",
+      "riderDriverFullName": "JASON COLLETT",
+      "handicapWeight": 57,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "53x13",
+      "tcdwIndicators": "C W",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 95,
+      "techFormRating": 0,
+      "totalRatingPoints": 4,
+      "earlySpeedRating": 49,
+      "earlySpeedRatingBand": "MIDFIELD",
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/10?jurisdiction=NSW"
+      }
+    },
+    {
+      "runnerName": "ELSTEAD",
+      "runnerNumber": 11,
+      "fixedOdds": {
+        "returnWin": 26,
+        "returnWinTime": "2026-09-23T04:19:56.000Z",
+        "returnWinOpen": 26,
+        "returnWinOpenDaily": 19,
+        "returnPlace": 5,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "bettingStatus": "Open",
+        "propositionNumber": 154191,
+        "differential": null,
+        "flucs": [
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-23T04:10:15.000Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-23T02:32:50.000Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-23T01:50:04.000Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T23:03:24.000Z"
+          }
+        ],
+        "returnHistory": [
+          {
+            "returnWin": 21,
+            "returnWinTime": "2026-09-21T06:05:30.889Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-21T07:10:30.605Z"
+          },
+          {
+            "returnWin": 15,
+            "returnWinTime": "2026-09-21T06:36:43.773Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-21T06:12:48.984Z"
+          },
+          {
+            "returnWin": 13,
+            "returnWinTime": "2026-09-21T06:13:43.025Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T21:04:10.924Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-21T05:55:03.403Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-21T06:17:35.960Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-22T21:50:24.195Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T22:18:40.221Z"
+          },
+          {
+            "returnWin": 34,
+            "returnWinTime": "2026-09-21T06:04:24.586Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-21T06:04:52.303Z"
+          },
+          {
+            "returnWin": 31,
+            "returnWinTime": "2026-09-21T05:55:43.501Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-21T06:12:47.430Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-22T22:53:13.705Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T23:00:32.651Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-22T23:01:18.651Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T23:03:23.793Z"
+          },
+          {
+            "returnWin": 14,
+            "returnWinTime": "2026-09-22T00:42:13.611Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T00:46:12.127Z"
+          },
+          {
+            "returnWin": 16,
+            "returnWinTime": "2026-09-22T00:47:00.864Z"
+          },
+          {
+            "returnWin": 18,
+            "returnWinTime": "2026-09-23T01:50:03.730Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-23T02:32:49.960Z"
+          },
+          {
+            "returnWin": 23,
+            "returnWinTime": "2026-09-23T04:10:15.098Z"
+          },
+          {
+            "returnWin": 26,
+            "returnWinTime": "2026-09-23T04:19:55.539Z"
+          },
+          {
+            "returnWin": 17,
+            "returnWinTime": "2026-09-22T05:53:14.307Z"
+          },
+          {
+            "returnWin": 19,
+            "returnWinTime": "2026-09-22T18:18:13.768Z"
+          }
+        ],
+        "percentageChange": 13,
+        "allowPlace": true
+      },
+      "parimutuel": {
+        "returnWin": 23.5,
+        "returnPlace": 4.6,
+        "returnExact2": 0,
+        "isFavouriteWin": false,
+        "isFavouritePlace": false,
+        "isFavouriteExact2": false,
+        "bettingStatus": "Open",
+        "marketMovers": [
+          {
+            "returnWin": 23.2,
+            "returnWinTime": "2026-09-23T04:20:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 22.4,
+            "returnWinTime": "2026-09-23T04:19:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 23.9,
+            "returnWinTime": "2026-09-23T04:18:37.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 22.9,
+            "returnWinTime": "2026-09-23T04:17:36.000Z",
+            "specialDisplayIndicator": false
+          },
+          {
+            "returnWin": 20.9,
+            "returnWinTime": "2026-09-23T04:09:36.000Z",
+            "specialDisplayIndicator": true
+          }
+        ],
+        "percentageChange": 1
+      },
+      "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/CERISE",
+      "trainerName": "C Waller",
+      "vacantBox": false,
+      "trainerFullName": "CHRIS WALLER",
+      "barrierNumber": 5,
+      "riderDriverName": "T Schiller",
+      "riderDriverFullName": "TYLER SCHILLER",
+      "handicapWeight": 55,
+      "harnessHandicap": null,
+      "blinkers": false,
+      "claimAmount": -1,
+      "last5Starts": "f1x",
+      "tcdwIndicators": "CDW",
+      "emergency": false,
+      "penalty": null,
+      "dfsFormRating": 91,
+      "techFormRating": 0,
+      "totalRatingPoints": 3,
+      "earlySpeedRating": 29,
+      "earlySpeedRatingBand": "BACKMARKER",
+      "_links": {
+        "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/11?jurisdiction=NSW"
+      }
+    }
+  ],
+  "oddsUpdateTime": "2026-09-23T04:21:37.000Z",
+  "fixedOddsUpdateTime": "2026-09-23T04:21:22.000Z",
+  "raceComments": "{\"comment\":\"2. PHILLIP ISLAND led all the way to win his maiden at his penultimate start, and then tried similar tactics when weakening late off the front at Caulfield in the McNeil Stakes just over 3 weeks ago. This is easier, and he could take plenty of pegging back. 7. REACHIN' OUT resumed in the G2 Silver Shadow last month, and never ran on. She has won a trial since then, and with the aid of a good draw, she should finish a lot closer in this more suitable company. Each way. 6. PEYTON was too strong in a 4-horse field fresh up at Gosford nearly 4 weeks ago, and has been kept ticking over with a quiet trial since then. He has plenty of options from the pole position, and it won't be too long before he wins another race. 3. BLESSED EAGLE fell in when winning his debut here by a nose, and then was claimed late when third off the front 3 weeks ago, again on this track. A wide gate is the query, but he is still worth including in all top 4 combos.\",\"runners\":[2,7,6,3],\"exclusive\":true}",
+  "tips": {
+    "tipType": "Special",
+    "tipster": "Darren Flindell",
+    "tipRunnerNumbers": [6, 4, 9, 3]
+  },
+  "ratings": [
+    {
+      "ratingType": "Rating",
+      "ratingRunnerNumbers": [7, 6, 2, 3]
+    },
+    {
+      "ratingType": "Last12Months",
+      "ratingRunnerNumbers": [7, 2, 5, 9]
+    },
+    {
+      "ratingType": "Recent",
+      "ratingRunnerNumbers": [10, 1, 4, 2]
+    },
+    {
+      "ratingType": "Distance",
+      "ratingRunnerNumbers": [1, 5, 11, 3]
+    },
+    {
+      "ratingType": "Class",
+      "ratingRunnerNumbers": [3, 11, 10, 6]
+    },
+    {
+      "ratingType": "Time",
+      "ratingRunnerNumbers": [2, 7, 9, 4]
+    },
+    {
+      "ratingType": "Overall",
+      "ratingRunnerNumbers": [7, 2, 1, 3]
+    }
+  ],
+  "multiLegApproximates": [
+    {
+      "wageringProduct": "RunningDouble",
+      "approximateSets": [
+        {
+          "results": [
+            {
+              "legNumber": 1,
+              "result": 4,
+              "runnerName": "CHUCHICHASCHTLI"
+            }
+          ],
+          "approximates": [
+            {
+              "selection": 1,
+              "return": 314.8
+            },
+            {
+              "selection": 2,
+              "return": 104.3
+            },
+            {
+              "selection": 3,
+              "return": 34.5
+            },
+            {
+              "selection": 4,
+              "return": 176.4
+            },
+            {
+              "selection": 5,
+              "return": 388.8
+            },
+            {
+              "selection": 6,
+              "return": 18.8
+            },
+            {
+              "selection": 7,
+              "return": 53.5
+            },
+            {
+              "selection": 8,
+              "return": 172.2
+            },
+            {
+              "selection": 9,
+              "return": 114.8
+            },
+            {
+              "selection": 10,
+              "return": 95.2
+            },
+            {
+              "selection": 11,
+              "return": 209
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "betTypes": [
+    {
+      "wageringProduct": "Win",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "Place",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "Quinella",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "Exacta",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "Duet",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "Trifecta",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "FirstFour",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "RunningDouble",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    },
+    {
+      "wageringProduct": "Big6",
+      "name": "SR",
+      "firstLeg": {
+        "raceNumber": 2,
+        "venueMnemonic": "WFM",
+        "raceType": "R"
+      }
+    }
+  ],
+  "extraMarkets": [
+    {
+      "id": 139698395,
+      "name": "WARWICK FARM-R2-Fav Out",
+      "shortName": "WARWICK FARM-R2-FavOut",
+      "betOption": "Favourite Out",
+      "message": "Must finish 1st or 2nd behind N/A Runner",
+      "informationMessage": null,
+      "cashOutEligibility": "Disabled",
+      "refundsAndDeductions": true,
+      "closeTime": "2026-09-23T04:25:00.000Z",
+      "bettingStatus": "Open",
+      "allowWin": true,
+      "allowPlace": false,
+      "allowEachWay": false,
+      "allowMulti": true,
+      "allowMultiWin": true,
+      "allowMultiPlace": false,
+      "allowMultiEachWay": false,
+      "numberOfPlaces": 0,
+      "allowBundle": false,
+      "propositions": [
+        {
+          "id": "2110444",
+          "name": "DE ARMAS",
+          "returnWin": 41,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 1,
+          "number": 155778,
+          "runnerNumber": 1,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/NAVY%20BLUE%2C%20GOLD%20HOOPS%2C%20WHITE%20SLEEVES%20AND%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/1?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110445",
+          "name": "PHILLIP ISLAND",
+          "returnWin": 10,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 2,
+          "number": 155779,
+          "runnerNumber": 2,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/NAVY%20AND%20WHITE%20HALVES%2C%20NAVY%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/2?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110446",
+          "name": "BLESSED EAGLE",
+          "returnWin": 2.7,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 3,
+          "number": 155780,
+          "runnerNumber": 3,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/WHITE%2C%20MAROON%20BAND%2C%20ARMBANDS%20AND%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/3?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110447",
+          "name": "SKY DECK",
+          "returnWin": 11,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 4,
+          "number": 155797,
+          "runnerNumber": 4,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/BOTTLE%20GREEN%2C%20WHITE%20CHECKED%20SLEEVES%2C%20WHITE%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/4?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110448",
+          "name": "SATIN SUMMER",
+          "returnWin": 23,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 5,
+          "number": 155798,
+          "runnerNumber": 5,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/TARTAN%2C%20GREEN%20SLEEVES%2C%20GREEN%20AND%20DARK%20BLUE%20QUARTERED%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/5?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110449",
+          "name": "PEYTON",
+          "returnWin": 0,
+          "returnPlace": 0,
+          "bettingStatus": "Reserve",
+          "allowPlace": false,
+          "sortOrder": 6,
+          "number": 155799,
+          "runnerNumber": 6,
+          "isOpen": false,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/RED%2C%20WHITE%20GATECRASHER",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/6?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110450",
+          "name": "REACHIN OUT",
+          "returnWin": 3.9,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 7,
+          "number": 155800,
+          "runnerNumber": 7,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/AQUAMARINE",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/7?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110451",
+          "name": "CONSULATE",
+          "returnWin": 15,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 8,
+          "number": 155813,
+          "runnerNumber": 8,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/LIME%20GREEN%2C%20DARK%20GREEN%20SHAMROCK%2C%20BLACK%20AND%20WHITE%20CHECKED%20SLEEVES%20AND%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/8?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110452",
+          "name": "THE THORNCASTER",
+          "returnWin": 12,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 9,
+          "number": 155814,
+          "runnerNumber": 9,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/BLACK%2C%20ORANGE%20CHECKS%2C%20BENNETT%20RACING%20LOGO%2C%20WHITE%20CHECKED%20SLEEVES%2C%20CHECKED%20CAP",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/9?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110453",
+          "name": "HARRYBEGOOD",
+          "returnWin": 6,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 10,
+          "number": 155815,
+          "runnerNumber": 10,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/BOTTLE%20GREEN%2C%20BLACK%20LIGHTNING%20BOLT%2C%20EMERALD%20GREEN%20SLEEVES%2C%20BOTTLE%20GREEN%20CAP%2C%20BLACK%20LIGHTNING%20BOLT",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/10?jurisdiction=NSW"
+          }
+        },
+        {
+          "id": "2110454",
+          "name": "ELSTEAD",
+          "returnWin": 15,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "sortOrder": 11,
+          "number": 155816,
+          "runnerNumber": 11,
+          "isOpen": true,
+          "silkURL": "https://api.beta.tab.com.au/v1/tab-info-service/racing/silk/CERISE",
+          "_links": {
+            "form": "https://api.beta.tab.com.au/v1/tab-info-service/racing/dates/2026-09-23/meetings/R/WFM/races/2/form/11?jurisdiction=NSW"
+          }
+        }
+      ]
+    }
+  ],
+  "sameRaceMultiMarkets": [
+    {
+      "id": 139693936,
+      "name": "WARWICK FARM-R2-Top1",
+      "shortName": "WARWICK FARM-R2-Top1",
+      "betOption": "Top 1",
+      "message": null,
+      "informationMessage": null,
+      "refundsAndDeductions": true,
+      "bettingStatus": "Open",
+      "allowMulti": true,
+      "propositions": [
+        {
+          "name": "DE ARMAS",
+          "returnWin": 81,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151183,
+          "runnerNumber": 1
+        },
+        {
+          "name": "PHILLIP ISLAND",
+          "returnWin": 18,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151184,
+          "runnerNumber": 2
+        },
+        {
+          "name": "BLESSED EAGLE",
+          "returnWin": 4.6,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151185,
+          "runnerNumber": 3
+        },
+        {
+          "name": "SKY DECK",
+          "returnWin": 19,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151186,
+          "runnerNumber": 4
+        },
+        {
+          "name": "SATIN SUMMER",
+          "returnWin": 41,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151187,
+          "runnerNumber": 5
+        },
+        {
+          "name": "PEYTON",
+          "returnWin": 2.1,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151188,
+          "runnerNumber": 6
+        },
+        {
+          "name": "REACHIN OUT",
+          "returnWin": 6.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151189,
+          "runnerNumber": 7
+        },
+        {
+          "name": "CONSULATE",
+          "returnWin": 26,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151190,
+          "runnerNumber": 8
+        },
+        {
+          "name": "THE THORNCASTER",
+          "returnWin": 21,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151191,
+          "runnerNumber": 9
+        },
+        {
+          "name": "HARRYBEGOOD",
+          "returnWin": 10,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151192,
+          "runnerNumber": 10
+        },
+        {
+          "name": "ELSTEAD",
+          "returnWin": 26,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151193,
+          "runnerNumber": 11
+        }
+      ]
+    },
+    {
+      "id": 139693937,
+      "name": "WARWICK FARM-R2-Top2",
+      "shortName": "WARWICK FARM-R2-Top2",
+      "betOption": "Top 2",
+      "message": null,
+      "informationMessage": null,
+      "refundsAndDeductions": true,
+      "bettingStatus": "Open",
+      "allowMulti": true,
+      "propositions": [
+        {
+          "name": "DE ARMAS",
+          "returnWin": 21,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151194,
+          "runnerNumber": 1
+        },
+        {
+          "name": "PHILLIP ISLAND",
+          "returnWin": 6,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151195,
+          "runnerNumber": 2
+        },
+        {
+          "name": "BLESSED EAGLE",
+          "returnWin": 2.1,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151196,
+          "runnerNumber": 3
+        },
+        {
+          "name": "SKY DECK",
+          "returnWin": 6.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151197,
+          "runnerNumber": 4
+        },
+        {
+          "name": "SATIN SUMMER",
+          "returnWin": 11,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151198,
+          "runnerNumber": 5
+        },
+        {
+          "name": "PEYTON",
+          "returnWin": 1.25,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151199,
+          "runnerNumber": 6
+        },
+        {
+          "name": "REACHIN OUT",
+          "returnWin": 2.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151200,
+          "runnerNumber": 7
+        },
+        {
+          "name": "CONSULATE",
+          "returnWin": 8.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151201,
+          "runnerNumber": 8
+        },
+        {
+          "name": "THE THORNCASTER",
+          "returnWin": 7,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151202,
+          "runnerNumber": 9
+        },
+        {
+          "name": "HARRYBEGOOD",
+          "returnWin": 3.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151203,
+          "runnerNumber": 10
+        },
+        {
+          "name": "ELSTEAD",
+          "returnWin": 8.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151204,
+          "runnerNumber": 11
+        }
+      ]
+    },
+    {
+      "id": 139693942,
+      "name": "WARWICK FARM-R2-Top3",
+      "shortName": "WARWICK FARM-R2-Top3",
+      "betOption": "Top 3",
+      "message": null,
+      "informationMessage": null,
+      "refundsAndDeductions": true,
+      "bettingStatus": "Open",
+      "allowMulti": true,
+      "propositions": [
+        {
+          "name": "DE ARMAS",
+          "returnWin": 11,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151205,
+          "runnerNumber": 1
+        },
+        {
+          "name": "PHILLIP ISLAND",
+          "returnWin": 3.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151206,
+          "runnerNumber": 2
+        },
+        {
+          "name": "BLESSED EAGLE",
+          "returnWin": 1.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151207,
+          "runnerNumber": 3
+        },
+        {
+          "name": "SKY DECK",
+          "returnWin": 3.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151208,
+          "runnerNumber": 4
+        },
+        {
+          "name": "SATIN SUMMER",
+          "returnWin": 6.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151209,
+          "runnerNumber": 5
+        },
+        {
+          "name": "PEYTON",
+          "returnWin": 1.05,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151210,
+          "runnerNumber": 6
+        },
+        {
+          "name": "REACHIN OUT",
+          "returnWin": 1.9,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151211,
+          "runnerNumber": 7
+        },
+        {
+          "name": "CONSULATE",
+          "returnWin": 4.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151212,
+          "runnerNumber": 8
+        },
+        {
+          "name": "THE THORNCASTER",
+          "returnWin": 4,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151213,
+          "runnerNumber": 9
+        },
+        {
+          "name": "HARRYBEGOOD",
+          "returnWin": 2.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151214,
+          "runnerNumber": 10
+        },
+        {
+          "name": "ELSTEAD",
+          "returnWin": 4.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151215,
+          "runnerNumber": 11
+        }
+      ]
+    },
+    {
+      "id": 139693943,
+      "name": "WARWICK FARM-R2-Top4",
+      "shortName": "WARWICK FARM-R2-Top4",
+      "betOption": "Top 4",
+      "message": null,
+      "informationMessage": null,
+      "refundsAndDeductions": true,
+      "bettingStatus": "Open",
+      "allowMulti": true,
+      "propositions": [
+        {
+          "name": "DE ARMAS",
+          "returnWin": 6.5,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151216,
+          "runnerNumber": 1
+        },
+        {
+          "name": "PHILLIP ISLAND",
+          "returnWin": 2.6,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151217,
+          "runnerNumber": 2
+        },
+        {
+          "name": "BLESSED EAGLE",
+          "returnWin": 1.26,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151218,
+          "runnerNumber": 3
+        },
+        {
+          "name": "SKY DECK",
+          "returnWin": 2.6,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151219,
+          "runnerNumber": 4
+        },
+        {
+          "name": "SATIN SUMMER",
+          "returnWin": 4.25,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151220,
+          "runnerNumber": 5
+        },
+        {
+          "name": "PEYTON",
+          "returnWin": 1.01,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151221,
+          "runnerNumber": 6
+        },
+        {
+          "name": "REACHIN OUT",
+          "returnWin": 1.45,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151222,
+          "runnerNumber": 7
+        },
+        {
+          "name": "CONSULATE",
+          "returnWin": 3.25,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151223,
+          "runnerNumber": 8
+        },
+        {
+          "name": "THE THORNCASTER",
+          "returnWin": 2.75,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151224,
+          "runnerNumber": 9
+        },
+        {
+          "name": "HARRYBEGOOD",
+          "returnWin": 1.85,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151225,
+          "runnerNumber": 10
+        },
+        {
+          "name": "ELSTEAD",
+          "returnWin": 3.25,
+          "returnPlace": 1.01,
+          "bettingStatus": "Open",
+          "allowPlace": false,
+          "number": 151226,
+          "runnerNumber": 11
+        }
+      ]
+    }
+  ],
+  "isPromotionAvailable": false,
+  "isPromotionAvailableInVenueMode": false
+}

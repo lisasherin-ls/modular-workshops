@@ -26,6 +26,7 @@ dependencies = [
     "sqlalchemy>=2.0",
     "tavily-python>=0.7.21",
     "langchain-core>=1.5.3",
+    "curl-cffi>=0.16.3",
 ]
 
 # Harbor (Module 4, Environment Evals) is a dependency *group*, not a project

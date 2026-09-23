@@ -3,7 +3,10 @@
     "."
   ],
   "graphs": {
-    "deep_agent": "./agents/deep_agent/agent.py:agent"
+    "deep_agent": "./agents/agent.py:agent"
+  },
+    "http": {
+    "app": "./agents/app.py:app"
   },
   "env": ".env",
   "image_distro": "wolfi",

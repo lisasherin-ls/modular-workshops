@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@source "../node_modules/streamdown/dist/*.js";
+
+:root {
+  /* TAB green, taken from tab.com.au's own <meta name="theme-color">.
+     --brand-green-bright is that hue lifted for legibility on dark surfaces,
+     where the solid brand green is too dark to read as text. */
+  --brand-green: #008542;
+  --brand-green-bright: #2fbf71;
+
+  /* Base surfaces — near-black with a faint green undertone, never pure black */
+  --background: #0e1311;
+  --background-elevated: #141b18;
+  --surface: #1a2320;
+  --surface-hover: #212c28;
+  --muted: #161e1b;
+  --muted-foreground: #9fb3aa; /* green-grey */
+
+  /* Text */
+  --foreground: #eaf2ee; /* soft off-white */
+
+  /* Borders */
+  --border: #253029;
+  --border-subtle: #1e2823;
+
+  /* Primary — solid brand green, white text on top */
+  --primary: var(--brand-green);
+  --primary-hover: #00a352;
+  --primary-foreground: #ffffff;
+  --primary-soft: rgba(0, 133, 66, 0.18);
+  --primary-ring: rgba(47, 191, 113, 0.32);
+
+  /* Secondary accent — the lifted green, for small marks and tool chips */
+  --accent: var(--brand-green-bright);
+  --accent-bg: rgba(47, 191, 113, 0.12);
+  --accent-foreground: #eaf2ee;
+
+  /* Status */
+  --danger: #f3a5a5;
+  --danger-bg: rgba(243, 165, 165, 0.1);
+  --danger-border: rgba(243, 165, 165, 0.28);
+
+  /* Elevation */
+  --shadow-bubble: 0 2px 12px -8px rgba(0, 0, 0, 0.6);
+  --shadow-elevated: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 40px -24px rgba(0, 0, 0, 0.7);
+
+  /* Radii */
+  --radius-bubble: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--foreground);
+  background-color: var(--background);
+  /* Faint dual radial glow (brand green + a lighter tint) over near-black */
+  background-image:
+    radial-gradient(60rem 40rem at 18% -8%, rgba(0, 133, 66, 0.22), transparent 60%),
+    radial-gradient(52rem 38rem at 92% 4%, rgba(47, 191, 113, 0.09), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.composer {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, var(--surface), var(--background-elevated));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -16px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.composer:focus-within {
+  /* The lifted green, not the solid brand green: a #008542 hairline is
+     almost invisible against the dark surface. */
+  border-color: var(--brand-green-bright);
+  box-shadow: 0 0 0 3px var(--primary-ring), 0 8px 28px -14px rgba(47, 191, 113, 0.4);
+}
+
+/* Elevated panel — shared by composer, gate card, and bubbles */
+.surface-elevated {
+  background: linear-gradient(180deg, var(--surface), var(--background-elevated));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Input focus glow matching the composer's primary ring */
+.focus-glow {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.focus-glow:focus {
+  outline: none;
+  border-color: var(--brand-green-bright);
+  box-shadow: 0 0 0 3px var(--primary-ring);
+}
+
+.header-blur {
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  background: rgba(14, 19, 17, 0.72);
+}
+
+main {
+  overflow-anchor: none;
+}
+
+/* Subtle custom scrollbar for the dark surface */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 9999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--surface-hover);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+}
+
+.anim-msg {
+  animation: slide-up-fade 220ms ease-out both;
+}
+.anim-fade-in {
+  animation: fade-in 220ms ease-out both;
+}
