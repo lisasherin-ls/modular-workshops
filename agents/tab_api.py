@@ -64,6 +64,58 @@ def going_from_track_condition(condition: str | None) -> str | None:
     return going if going in GOING_SCALE else None
 
 
+def card_complete(meeting: dict) -> bool:
+    """Return whether the meeting contains every numbered race from one onward."""
+    numbers = sorted(
+        race.get("raceNumber")
+        for race in meeting.get("races") or []
+        if isinstance(race.get("raceNumber"), int)
+    )
+    return bool(numbers) and numbers == list(range(1, numbers[-1] + 1))
+
+
+def _meeting_name(meeting: dict) -> str:
+    name = str(meeting.get("meetingName") or "").strip()
+    location = str(meeting.get("location") or "").strip()
+    suffix = f" ({location})"
+    return name[:-len(suffix)] if location and name.endswith(suffix) else name
+
+
+def resolve_venue(payload: dict, venue: str, race_type: str = "R") -> dict:
+    """Resolve a venue name or code to one addressable meeting."""
+    query = venue.strip().casefold()
+    candidates = [
+        meeting
+        for meeting in payload.get("meetings") or []
+        if meeting.get("raceType") == race_type
+        and (
+            query in str(meeting.get("meetingName") or "").casefold()
+            or query == str(meeting.get("venueMnemonic") or "").casefold()
+        )
+    ]
+    if len(candidates) > 1:
+        options = []
+        for meeting in candidates:
+            mnemonic = meeting.get("venueMnemonic")
+            if mnemonic:
+                option = f"{mnemonic} - {_meeting_name(meeting)}"
+                location = meeting.get("location")
+                if location:
+                    option += f" ({location})"
+                if option not in options:
+                    options.append(option)
+        raise ValueError(f"Venue {venue!r} is ambiguous. Choose one: {', '.join(options)}.")
+    if not candidates:
+        raise ValueError(f"No {race_type} meeting matches venue {venue!r}.")
+    meeting = candidates[0]
+    if not meeting.get("venueMnemonic"):
+        raise ValueError(
+            f"Venue {venue!r} is listed but not addressable by the race tools; "
+            "try a state-scoped lookup instead."
+        )
+    return meeting
+
+
 def _tcdw(indicators: str | None) -> dict[str, bool]:
     """Unpack the TCDW string: Track, Course, Distance, Wet.
 
@@ -121,6 +173,7 @@ def normalize_meetings(
             continue
 
         condition = meeting.get("trackCondition")
+        going = going_from_track_condition(condition)
         meetings.append(
             {
                 "venue": meeting.get("meetingName"),
@@ -128,9 +181,11 @@ def normalize_meetings(
                 "state": meeting.get("location"),
                 "date": meeting.get("meetingDate"),
                 "track_condition": condition,
-                "going": going_from_track_condition(condition),
+                "going": going,
+                "going_available": going is not None,
                 "weather": meeting.get("weatherCondition"),
                 "rail": meeting.get("railPosition"),
+                "card_complete": card_complete(meeting),
                 "races": races,
             }
         )
@@ -198,6 +253,7 @@ def normalize_race(payload: dict, include_prices: bool = True) -> dict:
     """
     meeting = payload.get("meeting") or {}
     condition = meeting.get("trackCondition")
+    going = going_from_track_condition(condition)
 
     live = [
         r
@@ -231,7 +287,8 @@ def normalize_race(payload: dict, include_prices: bool = True) -> dict:
             "venue_code": meeting.get("venueMnemonic"),
             "state": meeting.get("location"),
             "track_condition": condition,
-            "going": going_from_track_condition(condition),
+            "going": going,
+            "going_available": going is not None,
             "weather": meeting.get("weatherCondition"),
         },
         # Prices move. Anything quoting one must say when it was true.

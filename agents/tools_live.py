@@ -29,6 +29,7 @@ from agents.tab_api import (
     normalize_form,
     normalize_meetings,
     normalize_race,
+    resolve_venue,
 )
 
 # Ground where a wet-track record is worth something.
@@ -58,16 +59,26 @@ def _call(fn, *args, **kwargs):
 
 
 @tool
-def list_meetings(date: str | None = None, state: str = "NSW") -> list[dict]:
+def list_meetings(
+    date: str | None = None, state: str = "NSW", venue: str | None = None
+) -> list[dict]:
     """List today's thoroughbred meetings, with the going and the races still to run.
 
     Args:
         date: Race day as YYYY-MM-DD. Defaults to today.
         state: Australian state, e.g. NSW, VIC, QLD. Use "ALL" for every location.
+        venue: Optional venue name or code to search across all locations.
     """
     day = date or _today()
     payload = _call(fetch_meetings, day)
-    meetings = normalize_meetings(payload, state=None if state.upper() == "ALL" else state.upper())
+    if venue:
+        meeting = resolve_venue(payload, venue)
+        payload = {"meetings": [meeting]}
+        state = meeting.get("location") or state
+        location = None
+    else:
+        location = None if state.upper() == "ALL" else state.upper()
+    meetings = normalize_meetings(payload, state=location)
     if not meetings:
         raise ValueError(
             f"No thoroughbred meetings still to run in {state} on {day}. "
