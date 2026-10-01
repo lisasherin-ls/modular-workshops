@@ -1,0 +1,157 @@
+{
+  "name": "tab-tipster-golden",
+  "description": "Golden examples for the Tab Tipster demo. One example per intent class (meetings lookup, races lookup, runner lookup, recommendation, out of scope). Venue and race placeholders are resolved against today's live card at upload time by run_experiment.py, so the set never goes stale.",
+  "examples": [
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is on today?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "answers_request",
+            "criterion": "Lists the meetings racing today, covering both Australian and international venues."
+          },
+          {
+            "key": "reports_going",
+            "criterion": "Gives the going for each meeting where the tool output includes one."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "retrieve_remaining_meetings"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What races are on at {{INTL_VENUE}} today?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "answers_request",
+            "criterion": "Lists the races at {{INTL_VENUE}}, with each race's name and start time."
+          },
+          {
+            "key": "reports_going",
+            "criterion": "Gives the going at {{INTL_VENUE}} if the tool output includes one."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "retrieve_races"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who's running in {{INTL_VENUE}}, R{{INTL_RACE}}?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "get_race"
+        ],
+        "assertions": [
+          {
+            "key": "answers_request",
+            "criterion": "Lists the runners in {{INTL_VENUE}} R{{INTL_RACE}}."
+          },
+          {
+            "key": "reports_going",
+            "criterion": "Gives the going at {{INTL_VENUE}} if the tool output includes one."
+          },
+          {
+            "key": "flags_scratchings",
+            "criterion": "Identifies every runner the tool output marks as scratched. Pass if none are scratched."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "get_race"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Give me the pick for {{AU_VENUE}} R{{AU_RACE}}"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "get_race",
+          "recommend_runners"
+        ],
+        "assertions": [
+          {
+            "key": "answers_request",
+            "criterion": "Names a runner as the pick for {{AU_VENUE}} R{{AU_RACE}}."
+          },
+          {
+            "key": "evidence_based",
+            "criterion": "Supports the pick with at least one piece of form or data from the tool output."
+          },
+          {
+            "key": "includes_caveat",
+            "criterion": "Includes a caveat — for example that the pick is not a certainty."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "get_recommendation"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is a 401 error?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [],
+        "assertions": [
+          {
+            "key": "declines_off_topic",
+            "criterion": "Declines to answer the question."
+          },
+          {
+            "key": "no_off_topic_answer",
+            "criterion": "Gives no explanation of what a 401 error is, not even a brief or partial one."
+          },
+          {
+            "key": "offers_alternative",
+            "criterion": "Offers to help with racing instead."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "out_of_scope"
+      }
+    }
+  ]
+}

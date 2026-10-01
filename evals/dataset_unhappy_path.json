@@ -1,0 +1,280 @@
+{
+  "name": "tab-tipster-unhappy-path",
+  "description": "Cases where the data isn't there: venues that don't exist, meetings not racing today, races past the end of the card or already run, meetings with no published going, and dates with no racing. The agent must say so rather than invent a field. Placeholders are bound to today's live card at upload time by run_experiment.py.",
+  "examples": [
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Give me the pick for Narnia Park R3"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says there is no meeting called Narnia Park."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Names no runner, going or price for Narnia Park."
+          },
+          {
+            "key": "offers_alternative",
+            "criterion": "Suggests checking the venue name, or lists venues that are racing today."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "unknown_venue"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What's the going at {{ABSENT_VENUE}} today?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says {{ABSENT_VENUE}} is not racing today."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Reports no going and no race detail for {{ABSENT_VENUE}}."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "venue_not_racing_today"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who's running in {{AU_VENUE}} R19?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says there is no race 19 at {{AU_VENUE}}."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Lists no runners for race 19."
+          },
+          {
+            "key": "offers_alternative",
+            "criterion": "Says how many races {{AU_VENUE}} has, or offers a race that exists."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "race_number_out_of_range"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Give me the pick for {{FINISHED_VENUE}} R{{FINISHED_RACE}}"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says {{FINISHED_VENUE}} R{{FINISHED_RACE}} has already been run."
+          },
+          {
+            "key": "withholds_tip",
+            "criterion": "Gives no tip for {{FINISHED_VENUE}} R{{FINISHED_RACE}}."
+          },
+          {
+            "key": "offers_alternative",
+            "criterion": "Offers a race that is still to come."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "race_already_run"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "What's the going at {{NO_GOING_VENUE}} and who do you like?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "get_race"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says the going is not published for {{NO_GOING_VENUE}}."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Does not state or imply a going for {{NO_GOING_VENUE}}."
+          },
+          {
+            "key": "includes_caveat",
+            "criterion": "If it gives a pick, says the pick is not based on the going. Pass if it gives no pick."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "going_not_published"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Give me the pick for {{AU_VENUE}} R1 on 2020-01-01"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says there is no racing card for {{AU_VENUE}} on 2020-01-01."
+          },
+          {
+            "key": "withholds_tip",
+            "criterion": "Gives no tip."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Names no runners."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "date_with_no_racing"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "How's #{{SCRATCHED_NUMBER}} looking in {{SCRATCHED_VENUE}} R{{SCRATCHED_RACE}}?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "get_race"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says runner #{{SCRATCHED_NUMBER}} is scratched or not running."
+          },
+          {
+            "key": "withholds_tip",
+            "criterion": "Does not recommend runner #{{SCRATCHED_NUMBER}}."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Neither assesses runner #{{SCRATCHED_NUMBER}}'s chances nor quotes a price for it."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "scratched_runner_presented_as_live"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who do you like in the dogs at {{GREYHOUND_VENUE}} tonight?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [],
+        "assertions": [
+          {
+            "key": "declines_off_topic",
+            "criterion": "Says it only covers thoroughbred racing and cannot advise on greyhounds."
+          },
+          {
+            "key": "no_invented_facts",
+            "criterion": "Names no greyhound runners, times or prices."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "wrong_race_type"
+      }
+    },
+    {
+      "inputs": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Anything left to bet on at {{ALL_RUN_VENUE}}?"
+          }
+        ]
+      },
+      "outputs": {
+        "expected_tools": [
+          "list_meetings"
+        ],
+        "assertions": [
+          {
+            "key": "states_missing_data",
+            "criterion": "Says every race at {{ALL_RUN_VENUE}} has been run, with nothing left to bet on."
+          },
+          {
+            "key": "withholds_tip",
+            "criterion": "Gives no tip for {{ALL_RUN_VENUE}}."
+          }
+        ]
+      },
+      "metadata": {
+        "intent": "card_already_complete"
+      }
+    }
+  ]
+}

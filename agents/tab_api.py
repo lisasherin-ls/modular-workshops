@@ -32,7 +32,9 @@ except ImportError:  # pragma: no cover - falls back to httpx
 
 from agents.mock_data import GOING_SCALE
 
-API_ROOT = os.getenv("API_ROOT")
+# Overridable for a proxy or a mock server; falls back to the public endpoint.
+# `or` rather than a getenv default so an empty value falls back too.
+API_ROOT = os.getenv("API_ROOT") or "https://api.beta.tab.com.au/v1/tab-info-service/racing"
 
 # Track condition comes back in at least four dialects across one response:
 # the AU numeric scale (SOFT5), bare international words (GOOD), US usage
@@ -572,6 +574,73 @@ def venues_on(date: str, jurisdiction: str = "NSW") -> dict[str, dict]:
         for m in (_MEETINGS_CACHE[key].get("meetings") or [])
         if m.get("venueMnemonic")
     }
+
+
+# Nicknames that share no words with the official name. Anything that is a
+# prefix or substring of the real name is handled by the tiers below instead.
+VENUE_ALIASES = {
+    "the valley": "moonee valley",
+    "headquarters": "flemington",
+    "hq": "flemington",
+}
+
+_COUNTRY_SUFFIX = re.compile(r"\s*\([A-Za-z]{2,4}\)\s*$")
+
+
+def _normalise_venue(name: str) -> str:
+    """Lowercase, drop the country suffix, squeeze punctuation and spacing."""
+    name = _COUNTRY_SUFFIX.sub("", name or "").lower()
+    name = re.sub(r"[^a-z0-9 ]+", " ", name)
+    return " ".join(name.split())
+
+
+def resolve_venue(date: str, query: str, race_type: str = "R") -> dict:
+    """Find the one meeting a user means, or ask them which.
+
+    Searches every meeting that day, including ones whose card has already
+    been run — a finished meeting that is filtered out of the list is exactly
+    how "Horseshoe Indianapolis" got answered with "Horseshoe Indianapolis
+    Extra". Matching runs in tiers (exact, prefix, substring) and the first
+    tier with any hit wins, so "Woodbine" resolves to Woodbine and not to
+    Woodbine Extra. More than one hit is a question for the user, never a
+    guess — including when the candidates are in different countries.
+    """
+    key = (date, "NSW")
+    if key not in _MEETINGS_CACHE:
+        _MEETINGS_CACHE[key] = fetch_meetings(date)
+    meetings = [
+        m
+        for m in _MEETINGS_CACHE[key].get("meetings") or []
+        if m.get("raceType") == race_type
+    ]
+
+    wanted = _normalise_venue(query)
+    wanted = VENUE_ALIASES.get(wanted, wanted)
+    if not wanted:
+        raise ValueError("Which venue? Give me a track name.")
+
+    named = [(m, _normalise_venue(m.get("meetingName", ""))) for m in meetings]
+    for tier in (
+        lambda n: n == wanted,
+        lambda n: n.startswith(wanted),
+        lambda n: wanted in n,
+    ):
+        hits = [m for m, n in named if tier(n)]
+        if len(hits) == 1:
+            return hits[0]
+        if len(hits) > 1:
+            options = ", ".join(
+                f"{m['meetingName']} ({m.get('location')})" for m in hits
+            )
+            raise ValueError(
+                f"More than one meeting matches {query!r} on {date}: {options}. "
+                "Which one do you mean?"
+            )
+
+    racing = ", ".join(sorted(m["meetingName"] for m in meetings))
+    raise ValueError(
+        f"No meeting matching {query!r} on {date}. Racing that day: {racing}."
+    )
 
 
 def check_venue(date: str, venue: str, race_type: str = "R") -> dict:

@@ -22,6 +22,7 @@ from langchain_core.tools import tool
 from agents.mock_data import going_distance
 from agents.tab_api import (
     check_venue,
+    resolve_venue,
     fetch_form,
     fetch_meetings,
     fetch_race,
@@ -58,14 +59,33 @@ def _call(fn, *args, **kwargs):
 
 
 @tool
-def list_meetings(date: str | None = None, state: str = "NSW") -> list[dict]:
-    """List today's thoroughbred meetings, with the going and the races still to run.
+def list_meetings(
+    date: str | None = None, state: str = "NSW", venue: str | None = None
+) -> list[dict]:
+    """List thoroughbred meetings, with the going and the races still to run.
+
+    Only thoroughbred racing is covered — greyhound and harness meetings are
+    never returned, so a missing dog track means "not my sport", not "not on".
 
     Args:
         date: Race day as YYYY-MM-DD. Defaults to today.
         state: Australian state, e.g. NSW, VIC, QLD. Use "ALL" for every location.
+        venue: Look up one track by name, anywhere, including a meeting whose
+            races have all been run. If the name matches more than one track
+            the tool says which, and you should ask the user rather than pick.
     """
     day = date or _today()
+
+    if venue:
+        meeting = _call(resolve_venue, day, venue)
+        found = normalize_meetings(
+            {"meetings": [meeting]}, state=None, upcoming_only=False
+        )
+        upcoming = normalize_meetings({"meetings": [meeting]}, state=None)
+        for m in found:
+            m["card_complete"] = not upcoming
+        return found
+
     payload = _call(fetch_meetings, day)
     meetings = normalize_meetings(payload, state=None if state.upper() == "ALL" else state.upper())
     if not meetings:
