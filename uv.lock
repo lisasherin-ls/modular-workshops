@@ -2434,6 +2434,7 @@ dependencies = [
     { name = "requests" },
     { name = "sqlalchemy" },
     { name = "tavily-python" },
+    { name = "truststore" },
 ]
 
 [package.dev-dependencies]
@@ -2466,6 +2467,7 @@ requires-dist = [
     { name = "requests", specifier = ">=2.32.5" },
     { name = "sqlalchemy", specifier = ">=2.0" },
     { name = "tavily-python", specifier = ">=0.7.21" },
+    { name = "truststore", specifier = "==0.10.4" },
 ]
 
 [package.metadata.requires-dev]
