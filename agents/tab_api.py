@@ -18,6 +18,7 @@ tested against the saved fixtures in evals/fixtures/.
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 from pathlib import Path
@@ -35,6 +36,7 @@ from agents.mock_data import GOING_SCALE
 # Overridable for a proxy or a mock server; falls back to the public endpoint.
 # `or` rather than a getenv default so an empty value falls back too.
 API_ROOT = os.getenv("API_ROOT") or "https://api.beta.tab.com.au/v1/tab-info-service/racing"
+logger = logging.getLogger(__name__)
 
 # Track condition comes back in at least four dialects across one response:
 # the AU numeric scale (SOFT5), bare international words (GOOD), US usage
@@ -46,6 +48,22 @@ GOING_FROM_TRACK_CONDITION: dict[str, str] = {
     "SOFT5": "Good To Soft",
     "SOFT6": "Soft", "SOFT7": "Soft", "SOFT": "Soft", "DEAD": "Soft", "SLOW": "Soft",
     "HEAVY8": "Heavy", "HEAVY9": "Heavy", "HEAVY10": "Heavy", "HEAVY": "Heavy",
+    "HVY": "Heavy", "HVY8": "Heavy", "HVY9": "Heavy", "HVY10": "Heavy",
+}
+
+GOING_PREFIX_ALIASES = {
+    "FIRM": "FIRM",
+    "FAST": "FIRM",
+    "HARD": "FIRM",
+    "GOOD": "GOOD",
+    "AWT": "GOOD",
+    "SYNTHETIC": "GOOD",
+    "STANDARD": "GOOD",
+    "SOFT": "SOFT",
+    "DEAD": "SOFT",
+    "SLOW": "SOFT",
+    "HEAVY": "HEAVY",
+    "HVY": "HEAVY",
 }
 
 # A race in one of these states has been run. Never tip into it.
@@ -57,13 +75,21 @@ _JURISDICTION_RE = re.compile(r"^[A-Za-z]{2,3}$")
 
 
 def going_from_track_condition(condition: str | None) -> str | None:
-    """Map a TAB track condition onto our going scale, or None if unknown.
-
-    """
-    if not condition:
+    """Map a TAB track condition onto our going scale, or None if unknown."""
+    normalized = (condition or "").strip().upper()
+    if not normalized:
         return None
-    going = GOING_FROM_TRACK_CONDITION.get(condition.strip().upper())
-    return going if going in GOING_SCALE else None
+    match = re.fullmatch(r"([A-Z]+)(\d*)", normalized)
+    if not match:
+        logger.warning("Unknown TAB track condition: %s", condition)
+        return None
+    prefix, suffix = match.groups()
+    canonical_prefix = GOING_PREFIX_ALIASES.get(prefix)
+    going = GOING_FROM_TRACK_CONDITION.get(f"{canonical_prefix or prefix}{suffix}")
+    if going not in GOING_SCALE:
+        logger.warning("Unknown TAB track condition: %s", condition)
+        return None
+    return going
 
 
 def _tcdw(indicators: str | None) -> dict[str, bool]:
