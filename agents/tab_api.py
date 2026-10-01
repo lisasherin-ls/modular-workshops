@@ -560,11 +560,17 @@ def fetch_meetings(date: str, jurisdiction: str = "NSW", timeout: float = 20.0) 
 _MEETINGS_CACHE: dict[tuple, dict] = {}
 
 
-def venues_on(date: str, jurisdiction: str = "NSW") -> dict[str, dict]:
+def venues_on(
+    date: str, race_type: str = "R", jurisdiction: str = "NSW"
+) -> dict[str, dict]:
     """Every venue racing on a date, keyed by venue code, across all locations.
 
     Used to check a venue code before building a race URL — the agent should
     never be able to guess one that silently resolves to another track.
+
+    Codes are only unique within a race type: Warrnambool's gallops and dogs
+    are both WBO. Filter first, or the last meeting with a code overwrites
+    the rest and a valid thoroughbred code is rejected.
     """
     key = (date, jurisdiction.upper())
     if key not in _MEETINGS_CACHE:
@@ -572,7 +578,7 @@ def venues_on(date: str, jurisdiction: str = "NSW") -> dict[str, dict]:
     return {
         m["venueMnemonic"]: m
         for m in (_MEETINGS_CACHE[key].get("meetings") or [])
-        if m.get("venueMnemonic")
+        if m.get("venueMnemonic") and m.get("raceType") == race_type
     }
 
 
@@ -645,14 +651,13 @@ def resolve_venue(date: str, query: str, race_type: str = "R") -> dict:
 
 def check_venue(date: str, venue: str, race_type: str = "R") -> dict:
     """Confirm a venue is racing on this date, or list the ones that are."""
-    venues = venues_on(date)
+    venues = venues_on(date, race_type)
     meeting = venues.get(venue.upper())
-    if meeting and meeting.get("raceType") == race_type:
+    if meeting:
         return meeting
     valid = sorted(
         f"{m['venueMnemonic']} ({m.get('meetingName')}, {m.get('location')})"
         for m in venues.values()
-        if m.get("raceType") == race_type
     )
     raise ValueError(
         f"No {race_type} meeting at {venue.upper()} on {date}. "
