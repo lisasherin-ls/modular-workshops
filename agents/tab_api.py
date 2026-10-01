@@ -426,6 +426,9 @@ BROWSER_HEADERS = {
 
 FIXTURE_DIR = Path(__file__).resolve().parent.parent / "evals" / "fixtures"
 
+IMPERSONATE_PROFILES = ("chrome124", "firefox133")
+_SUCCESSFUL_IMPERSONATE: str | None = None
+
 # The originally captured files, all of them Warwick Farm R2 on 2026-09-23.
 # They are only used when they actually match what was asked for; to add more
 # races, save them under the naming convention in _fixture_candidates().
@@ -503,31 +506,61 @@ def _http_get(url: str, params: dict, timeout: float) -> dict:
 
     TAB sits behind a WAF that rejects ordinary API clients on TLS fingerprint
     alone — curl and httpx time out where a browser gets a 200. curl_cffi
-    impersonates Chrome's handshake, which is what makes live calls work at
+    impersonates a browser's handshake, which is what makes live calls work at
     all. httpx stays as a fallback for environments without it.
     """
+    global _SUCCESSFUL_IMPERSONATE
+
     if curl_requests is not None:
-        try:
-            response = curl_requests.get(
-                url,
-                params=params,
-                # Override with TAB_IMPERSONATE (e.g. "chrome124", "safari17_0")
-                # if the WAF stops accepting the default profile.
-                impersonate=os.getenv("TAB_IMPERSONATE", "chrome"),
-                timeout=timeout,
-            )
-        except Exception as exc:  # noqa: BLE001 - transport errors vary by backend
-            raise ValueError(f"Could not reach the TAB API: {exc}") from exc
-        if response.status_code >= 400:
-            raise ValueError(
-                f"TAB returned {response.status_code}. Check the date, venue "
-                "code and race number."
-            )
-        return response.json()
+        configured_profile = os.getenv("TAB_IMPERSONATE") or IMPERSONATE_PROFILES[0]
+        profiles = []
+        if os.getenv("TAB_IMPERSONATE"):
+            profiles.append(configured_profile)
+        elif _SUCCESSFUL_IMPERSONATE:
+            profiles.append(_SUCCESSFUL_IMPERSONATE)
+        profiles.append(configured_profile)
+        profiles.extend(IMPERSONATE_PROFILES)
+        profiles = list(dict.fromkeys(profiles))
+
+        for profile in profiles:
+            try:
+                response = curl_requests.get(
+                    url,
+                    params=params,
+                    impersonate=profile,
+                    timeout=timeout,
+                )
+            except Exception as exc:  # noqa: BLE001 - transport errors vary by backend
+                raise ValueError(f"Could not reach the TAB API: {exc}") from exc
+            if response.status_code == 403 and profile != profiles[-1]:
+                continue
+            if response.status_code in {401, 403}:
+                raise ValueError(
+                    "TAB refused the request at the edge. Set TAB_IMPERSONATE to "
+                    "a working browser profile or set TAB_FIXTURES=1."
+                )
+            if response.status_code in {404, 422}:
+                raise ValueError(
+                    f"TAB returned {response.status_code}. Check the date, venue "
+                    "code and race number."
+                )
+            if response.status_code >= 400:
+                raise ValueError(f"TAB returned {response.status_code}.")
+            _SUCCESSFUL_IMPERSONATE = profile
+            return response.json()
 
     response = httpx.get(
         url, params=params, headers=BROWSER_HEADERS, timeout=timeout, follow_redirects=True
     )
+    if response.status_code in {401, 403}:
+        raise ValueError(
+            "TAB refused the request at the edge. Set TAB_IMPERSONATE to a working "
+            "browser profile or set TAB_FIXTURES=1."
+        )
+    if response.status_code in {404, 422}:
+        raise ValueError(
+            f"TAB returned {response.status_code}. Check the date, venue code and race number."
+        )
     response.raise_for_status()
     return response.json()
 
