@@ -20,8 +20,10 @@ from __future__ import annotations
 import json
 import os
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import httpx
 
@@ -52,6 +54,40 @@ FINISHED_STATUSES = {"Paying", "Interim", "Closed", "Abandoned", "Final"}
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _VENUE_RE = re.compile(r"^[A-Za-z]{2,6}$")
 _JURISDICTION_RE = re.compile(r"^[A-Za-z]{2,3}$")
+
+LOCATION_TIMEZONES = {
+    "NSW": "Australia/Sydney",
+    "VIC": "Australia/Sydney",
+    "TAS": "Australia/Sydney",
+    "ACT": "Australia/Sydney",
+    "QLD": "Australia/Brisbane",
+    "SA": "Australia/Adelaide",
+    "WA": "Australia/Perth",
+    "NT": "Australia/Darwin",
+    "IRL": "Europe/Dublin",
+    "GBR": "Europe/London",
+    "FR": "Europe/Paris",
+    "FRA": "Europe/Paris",
+    "JPN": "Asia/Tokyo",
+    "USA": "America/New_York",
+}
+
+
+def _timezone_for_location(location: str | None) -> ZoneInfo:
+    """Return the meeting timezone, defaulting to UTC."""
+    return ZoneInfo(LOCATION_TIMEZONES.get((location or "").upper(), "UTC"))
+
+
+def _render_timestamp(timestamp: str | None, location: str | None) -> str | None:
+    """Render an upstream UTC timestamp in the meeting timezone."""
+    if not timestamp:
+        return None
+    parsed = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    local = parsed.astimezone(_timezone_for_location(location))
+    zone = local.tzname() or "UTC"
+    return f"{local.strftime('%-I:%M%p').lower()} {zone}, {local.day} {local.strftime('%B')}"
 
 
 def going_from_track_condition(condition: str | None) -> str | None:
@@ -105,12 +141,14 @@ def normalize_meetings(
         for race in meeting.get("races") or []:
             if upcoming_only and race.get("raceStatus") in FINISHED_STATUSES:
                 continue
+            start_time_utc = race.get("raceStartTime")
             races.append(
                 {
                     "race_number": race.get("raceNumber"),
                     "name": race.get("raceName"),
                     "distance_m": race.get("raceDistance"),
-                    "start_time": race.get("raceStartTime"),
+                    "start_time_utc": start_time_utc,
+                    "start_time_local": _render_timestamp(start_time_utc, meeting.get("location")),
                     "status": race.get("raceStatus"),
                     "scratched": [
                         s.get("runnerNumber") for s in (race.get("scratchings") or [])
@@ -198,6 +236,9 @@ def normalize_race(payload: dict, include_prices: bool = True) -> dict:
     """
     meeting = payload.get("meeting") or {}
     condition = meeting.get("trackCondition")
+    start_time_utc = payload.get("raceStartTime")
+    odds_as_at_utc = payload.get("fixedOddsUpdateTime") if include_prices else None
+    location = meeting.get("location")
 
     live = [
         r
@@ -221,7 +262,8 @@ def normalize_race(payload: dict, include_prices: bool = True) -> dict:
             "distance_m": payload.get("raceDistance"),
             "class": payload.get("raceClassConditions"),
             "prize": payload.get("prizeMoney"),
-            "start_time": payload.get("raceStartTime"),
+            "start_time_utc": start_time_utc,
+            "start_time_local": _render_timestamp(start_time_utc, location),
             "direction": payload.get("trackDirection"),
             "status": payload.get("raceStatus"),
             "places_paid": payload.get("numberOfPlaces"),
@@ -235,7 +277,8 @@ def normalize_race(payload: dict, include_prices: bool = True) -> dict:
             "weather": meeting.get("weatherCondition"),
         },
         # Prices move. Anything quoting one must say when it was true.
-        "odds_as_at": payload.get("fixedOddsUpdateTime") if include_prices else None,
+        "odds_as_at_utc": odds_as_at_utc,
+        "odds_as_at_local": _render_timestamp(odds_as_at_utc, location),
         "runners": runners,
         "race_shape": _race_shape(runners),
         "editorial": _editorial(payload),

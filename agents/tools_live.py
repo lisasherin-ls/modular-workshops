@@ -267,7 +267,8 @@ def recommend_runners(
             else "race-card form flags — detailed records unavailable"
         ),
         "race_shape": race["race_shape"],
-        "odds_as_at": race["odds_as_at"],
+        "odds_as_at_utc": race["odds_as_at_utc"],
+        "odds_as_at_local": race["odds_as_at_local"],
         "ranking": ranking,
         "caveat": (
             (
